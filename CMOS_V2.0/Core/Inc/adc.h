@@ -36,6 +36,7 @@ extern ADC_HandleTypeDef hadc;
 
 /* USER CODE BEGIN Private defines */
 typedef struct  {
+	uint8_t UART_START;
 	uint8_t LSD_START;
 	uint16_t LSD_OFFSET;
 	uint16_t LSD_ADC[LSD_SIZE];

@@ -305,7 +305,7 @@ int8_t _LAOFf(uint8_t* s)
 }
 int8_t _DISTf(uint8_t* s){
 //	printf("distance=???\r\n");
-	
+	LSD_CMOS.UART_START=1;
 	
 	return 1;
 }
