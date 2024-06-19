@@ -58,7 +58,7 @@ void MX_ADC_Init(void)
   hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
   hadc.Init.Resolution = ADC_RESOLUTION_12B;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc.Init.ScanConvMode = ADC_SCAN_ENABLE;
+  hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc.Init.LowPowerAutoWait = DISABLE;
   hadc.Init.LowPowerAutoPowerOff = DISABLE;
@@ -171,33 +171,66 @@ void ADC_dispose (void)
 	
 //	HAL_ADC_Start_DMA(&hadc, (uint32_t *)My_adcData,adc_max);//因为你选择的软件触发，所以每次采集都需要开启一次
 	HAL_ADC_Start_DMA(&hadc, (uint32_t *)&adcBuf, LSD_SIZE);
+//	static   uint16_t i;
+//	for(i=0;i<LSD_SIZE;i++){                       							 //
+//		LSD_CMOS.LSD_ADC[i]=(uint16_t )adcBuf[i];
+//		sprintf(p_buf,"adc[%d] = %d\r\n",i,LSD_CMOS.LSD_ADC[i]);
+//		printf("%s",p_buf);
+//		if(LSD_CMOS.LSD_ADC[i]<2300 && LSD_CMOS.LSD_START==0){
+//			LSD_CMOS.LSD_START=1;
+//			printf("11111\r\n\r\n");
+//		}
+//		else if(LSD_CMOS.LSD_START==1 && LSD_CMOS.LSD_ADC[i]>3100){
+//			LSD_CMOS.LSD_START=2;
+//			LSD_CMOS.LSD_OFFSET=i;
+//			printf("22222\r\n\r\n");
+//		}
+//		else if(LSD_CMOS.LSD_START==2 && LSD_CMOS.LSD_ADC[i]<2500){
+//			LSD_CMOS.LSD_VALUE=(i-LSD_CMOS.LSD_OFFSET)*0.034;
+//			sprintf(p_buf,"lsd = %.2fmm\r\n",LSD_CMOS.LSD_VALUE);
+//			printf("%s",p_buf);
+//			LSD_CMOS.LSD_START=0;
+//			LSD_CMOS.LSD_OFFSET=0;
+//			break;
+//		}
+//		if(i>=LSD_SIZE){
+//			printf("Out of range\r\n");
+//		}
+//	}
+//	LSD_CMOS.LSD_START=0;
+//	LSD_CMOS.LSD_OFFSET=0;
+	
+}
+void ADC_CMOS (void)
+{
 	static   uint16_t i;
-	for(i=0;i<LSD_SIZE;i++){                       							 //遍历10次，进行滤波
+	for(i=0;i<LSD_SIZE;i++){                       							 //
 		LSD_CMOS.LSD_ADC[i]=(uint16_t )adcBuf[i];
 		sprintf(p_buf,"adc[%d] = %d\r\n",i,LSD_CMOS.LSD_ADC[i]);
-//		printf("%s",p_buf);
+		printf("%s",p_buf);
 		if(LSD_CMOS.LSD_ADC[i]<2300 && LSD_CMOS.LSD_START==0){
 			LSD_CMOS.LSD_START=1;
-//			printf("11111\r\n\r\n");
+			printf("11111\r\n\r\n");
 		}
-		else if(LSD_CMOS.LSD_START==1 && LSD_CMOS.LSD_ADC[i]>2600){
+		else if(LSD_CMOS.LSD_START==1 && LSD_CMOS.LSD_ADC[i]>3100){
 			LSD_CMOS.LSD_START=2;
 			LSD_CMOS.LSD_OFFSET=i;
-//			printf("22222\r\n\r\n");
+			printf("22222\r\n\r\n");
 		}
-		else 
-			if(LSD_CMOS.LSD_START==2 && LSD_CMOS.LSD_ADC[i]<1100){
-			LSD_CMOS.LSD_VALUE=i-LSD_CMOS.LSD_OFFSET;
-			sprintf(p_buf,"lsd = %f\r\n",LSD_CMOS.LSD_VALUE);
+		else if(LSD_CMOS.LSD_START==2 && LSD_CMOS.LSD_ADC[i]<2500){
+			LSD_CMOS.LSD_VALUE=(i-LSD_CMOS.LSD_OFFSET)*0.034;
+			sprintf(p_buf,"lsd = %.2fmm\r\n",LSD_CMOS.LSD_VALUE);
 			printf("%s",p_buf);
 			LSD_CMOS.LSD_START=0;
 			LSD_CMOS.LSD_OFFSET=0;
 			break;
 		}
+		if(i>=LSD_SIZE){
+			printf("Out of range\r\n");
+		}
 	}
 	LSD_CMOS.LSD_START=0;
 	LSD_CMOS.LSD_OFFSET=0;
-	
 }
 
 /* USER CODE END 1 */

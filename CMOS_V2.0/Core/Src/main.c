@@ -27,7 +27,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32f0xx_hal.h"
-
+#include "string.h"
+#include <stdlib.h>
 #include <stdio.h> 
 /* USER CODE END Includes */
 
@@ -56,9 +57,9 @@ char p_buf[128];
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+extern uint8_t aRxBuffer;
 
 
-uint16_t LSD_ADC[LSD_SIZE];
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -102,30 +103,32 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-  
-  
+  HAL_Delay(100);
+
   HAL_TIM_Base_Start_IT(&htim1);          //Ê¹ÄÜÖÐ¶Ï
   HAL_TIM_Base_Start(&htim1);
   HAL_TIM_PWM_Start(&htim14,TIM_CHANNEL_1);	// CP Clock(5MHz)     : PA4
   
   HAL_Delay(100);
   
-//  HAL_ADC_Start_DMA(&hadc, (uint32_t *)&adcBuf, 280);
-//	HAL_ADC_Start_DMA(&hadc, (uint32_t *)&adcBuf, LSD_SIZE);
+  HAL_UART_Receive_IT(&huart1, (uint8_t *)&aRxBuffer, 1);
   
-  HAL_UART_Transmit_DMA(&huart1, (uint8_t *)"========== c378 Test Start fan ==========\r\n\r\n", 45);
+  printf("========== c378 Test Start fan ==========\r\n\r\n");
+  
+//  HAL_UART_Transmit_DMA(&huart1, (uint8_t *)"========== c378 Test Start fan ==========\r\n\r\n", 45);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  UART_TEST_HANDLE();
 	  
-	  HAL_Delay(1000);
+//	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }

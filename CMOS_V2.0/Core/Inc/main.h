@@ -36,7 +36,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-#define LSD_SIZE 200 
+#define LSD_SIZE 300 
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

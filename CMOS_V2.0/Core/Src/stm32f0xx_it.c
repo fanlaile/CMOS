@@ -54,15 +54,15 @@ extern uint16_t adcBuf[];
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-extern uint16_t LSD_ADC[];
+//extern uint16_t LSD_ADC[];
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_adc;
 extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim14;
-extern DMA_HandleTypeDef hdma_usart1_tx;
 extern UART_HandleTypeDef huart1;
+extern LSD_Struct LSD_CMOS;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -162,6 +162,7 @@ void EXTI0_1_IRQHandler(void)
 //			for(uint16_t i =0; i < LSD_SIZE; i++){
 //				LSD_ADC[i]=adc_get_result();
 //			}
+			
 			ADC_dispose();
 			HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_1);
 		}
@@ -185,20 +186,6 @@ void DMA1_Channel1_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
 
   /* USER CODE END DMA1_Channel1_IRQn 1 */
-}
-
-/**
-  * @brief This function handles DMA1 channel 2 and 3 interrupts.
-  */
-void DMA1_Channel2_3_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA1_Channel2_3_IRQn 0 */
-
-  /* USER CODE END DMA1_Channel2_3_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart1_tx);
-  /* USER CODE BEGIN DMA1_Channel2_3_IRQn 1 */
-
-  /* USER CODE END DMA1_Channel2_3_IRQn 1 */
 }
 
 /**
