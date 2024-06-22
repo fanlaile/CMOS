@@ -73,7 +73,7 @@ cmd_T CMD_T[] = {
 	{0,	"help\r\n"			,_HELPf			},
 	{0,	"laser on\r\n"		,_LAONf			},
 	{0,	"laser off\r\n"		,_LAOFf			},
-	{0,	"distance?\r\n"		,_DISTf			},
+	{0,	"distance\r\n"		,_DISTf			},
 
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
@@ -94,7 +94,7 @@ void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -294,7 +294,7 @@ void V_STR_Printf(char *STR)
 		result^=STR[i];
 		i++;
 	}
-	printf("$%s|%x~",STR,result);
+	printf("$%s|%x~\r\n",STR,result);
 }
 
 /**

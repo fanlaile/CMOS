@@ -155,6 +155,7 @@ void CMOS_RUN_CLOCK(void)
 				
 //				LSD_CMOS.LSD_ADC[cnt++]=(adc_Buf>>4)&0xfff;
 				LSD_CMOS.LSD_ADC[cnt]+=adc_Buf;
+				
 			}
 			if((odd_cnt++)%2)
 			{
@@ -185,7 +186,8 @@ void CMOS_RUN_CLOCK(void)
 		{
 			LSD_CMOS.CMOS_START=0;
 			LSD_CMOS.LSD_VALUE[arount_cnt] = k-LSD_CMOS.LSD_OFFSET;
-			printf("lsd[%d] = %.2f \r\n",arount_cnt,LSD_CMOS.LSD_VALUE[arount_cnt]);
+
+//			printf("lsd[%d] = %.2f \r\n",arount_cnt,LSD_CMOS.LSD_VALUE[arount_cnt]);
 			break;
 		}
 		
@@ -202,23 +204,34 @@ void CMOS_RUN_CLOCK(void)
 	{
 		for(uint8_t n=0;n<10;n++)
 		{
-			if(lsd_max<LSD_CMOS.LSD_VALUE[n+2]){
-				lsd_max = LSD_CMOS.LSD_VALUE[n+2];
+			if(lsd_max<LSD_CMOS.LSD_VALUE[n+3]){
+				lsd_max = LSD_CMOS.LSD_VALUE[n+3];
 			}
-			if(lsd_min>LSD_CMOS.LSD_VALUE[n+2]){
-				lsd_min = LSD_CMOS.LSD_VALUE[n+2];
+			if(lsd_min>LSD_CMOS.LSD_VALUE[n+3]){
+				lsd_min = LSD_CMOS.LSD_VALUE[n+3];
 			}
-			lsd_sum+=LSD_CMOS.LSD_VALUE[n+2];
+			lsd_sum+=LSD_CMOS.LSD_VALUE[n+3];
 		}
-		lsd_sum=(lsd_sum-lsd_max-lsd_min)/8;
-		printf("lsd = %.2f max=%.2f min=%.2f\r\n",lsd_sum,lsd_max,lsd_min);
+		lsd_sum=((lsd_sum-lsd_max-lsd_min)/8) - 50;
+		if(lsd_sum>=0 && lsd_sum<800)
+		{
+			sprintf(p_buf,"DISTANCE,OK,%.2f",lsd_sum);
+			V_STR_Printf(p_buf);
+		}
+		else{
+			sprintf(p_buf,"DISTANCE,ERROR,0");
+			V_STR_Printf(p_buf);
+		}
+//		printf("lsd = %.2f max=%.2f min=%.2f\r\n",lsd_sum,lsd_max,lsd_min);
+//		sprintf(p_buf,"DISTANCE,OK,%.2f",lsd_sum);
+//		V_STR_Printf(p_buf);
 		LSD_CMOS.LSD_START=0;
 		arount_cnt=0;
 	}
 	
 	LSD_CMOS.SP_STATUS=0;
 	memset(LSD_CMOS.LSD_ADC,0x00,sizeof(LSD_CMOS.LSD_ADC));
-	HAL_Delay(100);
+	HAL_Delay(1);
 }
 
 /**
