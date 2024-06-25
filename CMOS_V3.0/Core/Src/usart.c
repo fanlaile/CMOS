@@ -214,9 +214,7 @@ int8_t me_strcmp(uint8_t *str1, char *str2, uint8_t mode)
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	
-//	if(huart->Instance == USART1)
-	{
-		
+
 		if(rxcount >= 255)  //Òç³öÅÐ¶Ï
 		{
 			rxcount = 0;
@@ -237,7 +235,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 		HAL_UART_Receive_IT(&huart1,(uint8_t *)&aRxBuffer,1);
 		
-	}
+	
 }
 
 /**
@@ -253,7 +251,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 void UART_TEST_HANDLE(void)
 {
 	uint8_t i;
-    if(Rx_flag)
+  if(Rx_flag)
 	{
 		for(i=0;i<cmd_num;i++)
 		{
@@ -270,10 +268,8 @@ void UART_TEST_HANDLE(void)
 		Rx_flag = 0;
 		rxcount = 0;
 		memset(receiver_buffer,0,sizeof(receiver_buffer));
-		
+		V_STR_Printf("COMMAND,ERROR");
 	}
-	
-	
 }
 /**
  * @brief    print verify
@@ -294,7 +290,7 @@ void V_STR_Printf(char *STR)
 		result^=STR[i];
 		i++;
 	}
-	printf("$%s|%x~\r\n",STR,result);
+	printf("$%s|%x~",STR,result);
 }
 
 /**

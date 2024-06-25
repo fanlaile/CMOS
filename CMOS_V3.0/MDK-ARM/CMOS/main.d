@@ -38,6 +38,7 @@ cmos\main.o: ../Core/Inc/adc.h
 cmos\main.o: ../Core/Inc/tim.h
 cmos\main.o: ../Core/Inc/usart.h
 cmos\main.o: ../Core/Inc/gpio.h
+cmos\main.o: ../Core/Inc/user.h
 cmos\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 cmos\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 cmos\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

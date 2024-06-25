@@ -7,6 +7,7 @@
 "cmos\usart.o"
 "cmos\stm32f0xx_it.o"
 "cmos\stm32f0xx_hal_msp.o"
+"cmos\user.o"
 "cmos\stm32f0xx_hal_adc.o"
 "cmos\stm32f0xx_hal_adc_ex.o"
 "cmos\stm32f0xx_hal_rcc.o"
