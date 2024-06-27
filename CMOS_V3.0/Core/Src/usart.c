@@ -59,7 +59,8 @@ int8_t _HELPf(uint8_t* s);
 int8_t _LAONf(uint8_t* s);
 int8_t _LAOFf(uint8_t* s);
 int8_t _DISTf(uint8_t* s);
-
+int8_t _MEONf(uint8_t* s);
+int8_t _MEOFf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -70,11 +71,12 @@ typedef struct {
 }cmd_T;
 
 cmd_T CMD_T[] = {
-	{0,	"help\r\n"			,_HELPf			},
-	{0,	"laser on\r\n"		,_LAONf			},
-	{0,	"laser off\r\n"		,_LAOFf			},
-	{0,	"distance\r\n"		,_DISTf			},
-
+	{0,	"help\r\n"							,_HELPf			},
+	{0,	"laser on\r\n"					,_LAONf			},
+	{0,	"laser off\r\n"					,_LAOFf			},
+	{0,	"distance\r\n"					,_DISTf			},
+	{0,	"measure start\r\n"			,_MEONf			},
+	{0,	"measure stop\r\n"			,_MEOFf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 /* USER CODE END 0 */
@@ -309,7 +311,9 @@ int8_t _HELPf(uint8_t* s)
 	printf("每条指令请以\\r\\n结尾!\r\n");
 	printf("laser on打开激光\r\n");
 	printf("laser off关闭激光\r\n");
-	printf("distance?距离查询\r\n");
+	printf("distance距离查询\r\n");
+	printf("measure start开启长测\r\n");
+	printf("measure stop关闭长测\r\n");
 	return 1;
 }
 
@@ -329,6 +333,18 @@ int8_t _LAOFf(uint8_t* s)
 }
 int8_t _DISTf(uint8_t* s){
 	LSD_CMOS.LSD_START=1;
+	return 1;
+}
+int8_t _MEONf(uint8_t* s){
+	
+	V_STR_Printf("measure start,OK");
+	LSD_CMOS.CMOS_START=1;
+	return 1;
+}
+int8_t _MEOFf(uint8_t* s){
+	
+	V_STR_Printf("measure stop,OK");
+	LSD_CMOS.CMOS_START=0;
 	return 1;
 }
 /* USER CODE END 1 */

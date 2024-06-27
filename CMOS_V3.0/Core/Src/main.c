@@ -111,7 +111,7 @@ int main(void)
   printf("========== c378 Test Start fan ==========\r\n\r\n");
    
   /* USER CODE END 2 */
-
+LASER_ON();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -122,7 +122,7 @@ int main(void)
 
 	  
 		UART_TEST_HANDLE();
-		if(LSD_CMOS.LSD_START)
+		if(LSD_CMOS.LSD_START || LSD_CMOS.CMOS_START)
 		{
 			CMOS_RUN_CLOCK();
 		}
@@ -151,6 +151,7 @@ void CMOS_RUN_CLOCK(void)
 	{
 		CMOS_DIS(arount_cnt);
 		arount_cnt=0;
+		LSD_CMOS.SP_STATUS=0;
 		LSD_CMOS.LSD_START=0;
 		memset(LSD_CMOS.LSD_ADC,0x00,sizeof(LSD_CMOS.LSD_ADC));
 		
