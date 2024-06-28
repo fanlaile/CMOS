@@ -269,7 +269,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x6656CD17)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x6656CD17)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x6656CD17)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x6656CD17)
-F (..\Core\Src\user.c)(0x667CCA79)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CMOS-IC:\Users\111622\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\111622\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o cmos\user.o --omf_browse cmos\user.crf --depend cmos\user.d)
+F (..\Core\Src\user.c)(0x667E5E30)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_CMOS-IC:\Users\111622\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\111622\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F030x6 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F030x6-o cmos\user.o --omf_browse cmos\user.crf --depend cmos\user.d)
 I (../Core/Inc/user.h)(0x667BCFC5)
 I (../Core/Inc/main.h)(0x6674D868)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x6656CD17)

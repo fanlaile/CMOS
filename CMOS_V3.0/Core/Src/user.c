@@ -99,25 +99,53 @@ void CMOS_ADC(uint8_t arount){
 //		}
 //	}
 }
+//√∞≈›≈≈–Ú 451237
+void BubbleSort(float* arr, uint8_t  n)
+{
+	uint8_t end = n;
+	while (end)
+	{
+		int flag = 0;
+		for (int i = 1; i < end; ++i)
+		{
+			if (arr[i - 1] > arr[i])
+			{
+				uint16_t tem = arr[i];
+				arr[i] = arr[i - 1];
+				arr[i - 1] = tem;
+				flag = 1;
+			}
+		}
+		if (flag == 0)
+		{
+			break;
+		}
+		--end;
+	}
+}
 
 /**
   * @brief CMOS DIS
   * @retval None
   */
 void CMOS_DIS(uint8_t arount){
-	float lsd_max=0,lsd_min=0xffff,lsd_sum=0;
+	float lsd_sum=0;//lsd_max=0,lsd_min=0xffff,
 	
-	for(uint8_t n=0;n<10;n++)
-		{
-			if(lsd_max<LSD_CMOS.LSD_VALUE[n+3]){
-				lsd_max = LSD_CMOS.LSD_VALUE[n+3];
-			}
-			if(lsd_min>LSD_CMOS.LSD_VALUE[n+3]){
-				lsd_min = LSD_CMOS.LSD_VALUE[n+3];
-			}
-			lsd_sum+=LSD_CMOS.LSD_VALUE[n+3];
-		}
-		lsd_sum=((lsd_sum-lsd_max-lsd_min)/8) - 50;
+	BubbleSort(LSD_CMOS.LSD_VALUE,10);
+	
+	lsd_sum=((LSD_CMOS.LSD_VALUE[3]+LSD_CMOS.LSD_VALUE[4]+LSD_CMOS.LSD_VALUE[5]+LSD_CMOS.LSD_VALUE[6])/4)-50;
+	
+//	for(uint8_t n=0;n<10;n++)
+//		{
+//			if(lsd_max<LSD_CMOS.LSD_VALUE[n+3]){
+//				lsd_max = LSD_CMOS.LSD_VALUE[n+3];
+//			}
+//			if(lsd_min>LSD_CMOS.LSD_VALUE[n+3]){
+//				lsd_min = LSD_CMOS.LSD_VALUE[n+3];
+//			}
+//			lsd_sum+=LSD_CMOS.LSD_VALUE[n+3];
+//		}
+//		lsd_sum=((lsd_sum-lsd_max-lsd_min)/8) - 50;
 		if(lsd_sum>=0 && lsd_sum<800)
 		{
 			sprintf(p_buf,"DISTANCE,OK,%.2f",lsd_sum);
