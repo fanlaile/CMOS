@@ -97,6 +97,7 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+	
   MX_GPIO_Init();
   MX_ADC_Init();
   MX_USART1_UART_Init();

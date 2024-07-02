@@ -165,31 +165,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 //	static uint8_t sp_status=0,cp_status=0;
 //	static uint16_t cnt=0,ADC_cnt=0;
 //	UNUSED(htim);
-//	if(htim->Instance == TIM16)  /* tim3*/
-//	{
-//		if(sp_status==0 && cnt==0)
-//		{
-////			printf("spspsp121\r\n");
-////			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_3, GPIO_PIN_SET);
-//			sp_status=1;
-//			LSD_CMOS.SP_STATUS=1;
-//		}
-//		else if(cnt>=1)
-//		{
-////			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_3, GPIO_PIN_RESET);
-//			
-//			sp_status=0;
-//		}
-//		cnt++;
-////		if(cnt>1000)
-////		{
-////			LSD_CMOS.SP_STATUS=0;
-////		}
-//		if(cnt>2400)
-//		{
-//			cnt=0;
-//		}
-//	}
+	if(htim->Instance == TIM16)  /* tim3*/
+	{
+		
+	}
 //	if(htim->Instance == TIM14)
 //	{
 //		if(cp_status == 0)
