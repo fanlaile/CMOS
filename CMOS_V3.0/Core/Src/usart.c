@@ -22,6 +22,7 @@
 
 /* USER CODE BEGIN 0 */
 #include "adc.h"
+#include "tim.h"
 #include "gpio.h"
 #include "stdio.h"
 #include <string.h>
@@ -50,7 +51,7 @@ uint8_t receivesize = 128;
 uint8_t txcount = 0; 
 uint16_t rxcount = 0; 
 uint8_t Rx_flag = 0; 
-int32_t str_to_num;
+int32_t str_to_num=100;
 
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd call back function                                                                                        */
@@ -61,6 +62,7 @@ int8_t _LAOFf(uint8_t* s);
 int8_t _DISTf(uint8_t* s);
 int8_t _MEONf(uint8_t* s);
 int8_t _MEOFf(uint8_t* s);
+int8_t _SETPf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -77,6 +79,7 @@ cmd_T CMD_T[] = {
 	{0,	"distance\r\n"					,_DISTf			},
 	{0,	"measure start\r\n"			,_MEONf			},
 	{0,	"measure stop\r\n"			,_MEOFf			},
+	{1,	"set pwm="					,_SETPf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 /* USER CODE END 0 */
@@ -174,6 +177,30 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+/**
+ * @brief    从字符串中提取数字 
+ *
+ * @param    None
+ *
+ * @returns  None 
+ *
+ * @details  
+ *
+ */
+void Get_Num(uint8_t *str,char ch)
+{
+	
+	char *s;
+	str_to_num=0;
+	
+	if(strchr((char*)str,ch) != NULL)
+	{
+		s = strchr((char*)str,ch)+1;
+//		printf("str = %s",s);
+		str_to_num=atoi(s);
+	}
+
+}
 /**
  * @brief    字符串比较函数
  *
@@ -314,20 +341,24 @@ int8_t _HELPf(uint8_t* s)
 	printf("distance距离查询\r\n");
 	printf("measure start开启长测\r\n");
 	printf("measure stop关闭长测\r\n");
+	printf("set pwm=设置激光pwm\r\n");
 	return 1;
 }
 
 int8_t _LAONf(uint8_t* s)
 {
-	LASER_ON();
+//	LASER_ON();
 //	printf("OK\r\n");
+	str_to_num*=10;
+	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, str_to_num);
 	V_STR_Printf("ON,OK");
 	return 1;
 }
 int8_t _LAOFf(uint8_t* s)
 {
-	LASER_OFF();
+//	LASER_OFF();
 //	printf("OK\r\n");
+	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);
 	V_STR_Printf("OFF,OK");
 	return 1;
 }
@@ -345,6 +376,17 @@ int8_t _MEOFf(uint8_t* s){
 	
 	V_STR_Printf("measure stop,OK");
 	LSD_CMOS.CMOS_START=0;
+	return 1;
+}
+int8_t _SETPf(uint8_t* s){
+	Get_Num(s,'=');
+	str_to_num*=10;
+	if(str_to_num>1000){
+		str_to_num=1000;
+	}
+//	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, str_to_num);
+	sprintf(p_buf,"set pwm=%d,OK",str_to_num/10);
+	V_STR_Printf(p_buf);
 	return 1;
 }
 /* USER CODE END 1 */

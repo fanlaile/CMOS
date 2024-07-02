@@ -93,12 +93,13 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
 	
   MX_GPIO_Init();
+	MX_TIM3_Init();
   MX_ADC_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
@@ -112,7 +113,10 @@ int main(void)
   printf("========== c378 Test Start fan ==========\r\n\r\n");
    
   /* USER CODE END 2 */
-LASER_ON();
+//	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 500);
+	HAL_TIM_Base_Start_IT(&htim3);
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+//LASER_ON();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

@@ -36,6 +36,7 @@ cmos\usart.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 cmos\usart.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 cmos\usart.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 cmos\usart.o: ../Core/Inc/adc.h
+cmos\usart.o: ../Core/Inc/tim.h
 cmos\usart.o: ../Core/Inc/gpio.h
 cmos\usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 cmos\usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
