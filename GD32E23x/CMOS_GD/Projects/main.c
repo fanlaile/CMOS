@@ -39,6 +39,7 @@ int main(void)
 	PWM_timer_config();
 	ADC_Init();
 	Usart_Init();
+
 	printf("========== c378 Test Start fan ==========\r\n\r\n ");
     
 	while(1)
@@ -48,6 +49,7 @@ int main(void)
 		if(LSD_CMOS.LSD_START || LSD_CMOS.CMOS_START)
 		{
 			CMOS_RUN_CLOCK();
+			
 		}
 	}
 }
@@ -77,12 +79,12 @@ void CMOS_RUN_CLOCK(void)
 		LSD_CMOS.LSD_INT=0;
 		LSD_CMOS.SP_STATUS=0;
 		LSD_CMOS.LSD_START=0;
-		memset(LSD_CMOS.LSD_ADC,0x00,sizeof(LSD_CMOS.LSD_ADC));
+		memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
 		memset(LSD_CMOS.LSD_VALUE,0x00,sizeof(LSD_CMOS.LSD_VALUE));
 	}
 	LSD_CMOS.LSD_INT=0;
 	LSD_CMOS.SP_STATUS=0;
-	memset(LSD_CMOS.LSD_ADC,0x00,sizeof(LSD_CMOS.LSD_ADC));
+	memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
 	delay_1ms(1);
 }
 

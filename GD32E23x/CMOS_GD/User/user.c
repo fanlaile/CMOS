@@ -33,13 +33,12 @@ void CMOS_CLK(void){
 				LSD_CMOS.SP_STATUS=1;
 			}
 			CP_L();
-//			printf("cp_l\r\n");
 			adc_Buf=Get_ADC_Value();
 
-
+			
 			if(cnt<LSD_SIZE && LSD_CMOS.LSD_INT==2 && LSD_CMOS.SP_STATUS){
 
-				LSD_CMOS.LSD_ADC[cnt/2]+=adc_Buf;
+				LSD_CMOS.LSD_ADC[(cnt/2)+200]+=adc_Buf;
 				cnt++;
 			}
 
@@ -50,10 +49,11 @@ void CMOS_CLK(void){
 		}
 		else{
 			CP_H();
-			adc_Buf_fake=Get_ADC_Value();
+			
 			if(i==4){
 				SP_L();
 			}
+			adc_Buf_fake=Get_ADC_Value();
 		}
 	}
 }
@@ -65,31 +65,38 @@ void CMOS_CLK(void){
 void CMOS_ADC(uint8_t arount){
 	int left_sum=0,right_sum=0,abs_val=0x7FFFFFFF;
 	int abs_minn=0x7FFFFFFF;
+	int smooth_sum=0;
+	
+	for(uint16_t k=0;k<200;k++)
+	{
+		LSD_CMOS.LSD_ADC[k]=8000;
+		LSD_CMOS.LSD_ADC[1423-k]=8000;
+	}
 
-	for(uint16_t i=10;i<(LSD_SIZE/2)-20;i++){
-		for(uint16_t m=1;m<7;m++){
-			LSD_CMOS.LSD_ADC[i]+=LSD_CMOS.LSD_ADC[i+m];
+	for(uint16_t i=200;i<1224;i++){
+		for(uint16_t m=1;m<10;m++){
+			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
 		}
-		LSD_CMOS.LSD_ADC[i]/=7;
-		
+		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
+		smooth_sum=0;
 	}
-	for(uint16_t i=10;i<(LSD_SIZE/2)-20;i++){
-		for(uint16_t m=1;m<7;m++){
-			LSD_CMOS.LSD_ADC[i]+=LSD_CMOS.LSD_ADC[i+m];
-		}
-		LSD_CMOS.LSD_ADC[i]/=7;
-		
-	}
-	for(uint16_t i=10;i<(LSD_SIZE/2)-20;i++){
-		for(uint16_t m=1;m<7;m++){
-			LSD_CMOS.LSD_ADC[i]+=LSD_CMOS.LSD_ADC[i+m];
-		}
-		LSD_CMOS.LSD_ADC[i]/=7;
-		
-	}
+//	for(uint16_t i=10;i<(LSD_SIZE/2)-20;i++){
+//		for(uint16_t m=1;m<7;m++){
+//			LSD_CMOS.LSD_ADC[i]+=LSD_CMOS.LSD_ADC[i+m];
+//		}
+//		LSD_CMOS.LSD_ADC[i]/=7;
+//		
+//	}
+//	for(uint16_t i=10;i<(LSD_SIZE/2)-20;i++){
+//		for(uint16_t m=1;m<7;m++){
+//			LSD_CMOS.LSD_ADC[i]+=LSD_CMOS.LSD_ADC[i+m];
+//		}
+//		LSD_CMOS.LSD_ADC[i]/=7;
+//		
+//	}
 	
 	
-	for(uint16_t i=10;i<(LSD_SIZE/2)-100;i++){
+	for(uint16_t i=0;i<1224;i++){
 //		if(arount_cnt==3){
 //		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 //		}
@@ -99,15 +106,16 @@ void CMOS_ADC(uint8_t arount){
 			right_sum+=LSD_CMOS.LSD_ADC[i+m+smooth_length];
 		}
 		abs_val=abs(left_sum+right_sum);
+		left_sum=0;
+		right_sum=0;
 
-		if((LSD_CMOS.LSD_ADC[i]>(LSD_CMOS.LSD_ADC[i+smooth_length-1])+500))
-		{
-			if(abs_minn>abs_val){
-				lsd_index=i;
-				LSD_CMOS.LSD_VALUE[arount_cnt]=i;
-				abs_minn=abs_val;
-			}
+
+		if(abs_minn>abs_val){
+			lsd_index=i;
+			LSD_CMOS.LSD_VALUE[arount_cnt]=i;
+			abs_minn=abs_val;
 		}
+		abs_val=0;
 	}		
 
 //	printf("index = %.1f\r\n",LSD_CMOS.LSD_VALUE[arount_cnt]);
@@ -170,9 +178,9 @@ void CMOS_DIS(uint8_t arount){
 	
 //	InsertSort(LSD_CMOS.LSD_VALUE,5);
 //	printf("%.1f,%.1f,%.1f,%.1f,%.1f",LSD_CMOS.LSD_VALUE[0],LSD_CMOS.LSD_VALUE[1],LSD_CMOS.LSD_VALUE[2],LSD_CMOS.LSD_VALUE[3],LSD_CMOS.LSD_VALUE[4]);
-	lsd_sum=(LSD_CMOS.LSD_VALUE[1]+LSD_CMOS.LSD_VALUE[2]+LSD_CMOS.LSD_VALUE[3]+LSD_CMOS.LSD_VALUE[4])/4;
+	
 	lsd_sum=LSD_CMOS.LSD_VALUE[2];
-	lsd_sum=lsd_sum-10;
+	lsd_sum=lsd_sum-200;
 	if(lsd_sum>0 && lsd_sum<900)
 	{
 			sprintf(p_buf,"DISTANCE,OK,%.2f",lsd_sum);

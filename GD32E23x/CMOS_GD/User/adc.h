@@ -21,7 +21,7 @@ typedef struct  {
 	uint8_t LSD_INT;
 	uint8_t CMOS_START;
 	uint16_t LSD_OFFSET;
-	uint16_t LSD_ADC[LSD_SIZE/2];
+	uint16_t LSD_ADC[1424];
 	float LSD_VALUE[5];
 }LSD_Struct;
 

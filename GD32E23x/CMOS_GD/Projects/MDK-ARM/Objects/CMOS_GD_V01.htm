@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\CMOS_GD_V01.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\CMOS_GD_V01.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Sat Jul  6 10:41:52 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Sat Jul  6 15:40:11 2024
 <BR><P>
 <H3>Maximum Stack Usage =        108 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -430,19 +430,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5c]"></a>CMOS_ADC</STRONG> (Thumb, 344 bytes, Stack size 40 bytes, user.o(.text.CMOS_ADC))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = CMOS_ADC &rArr; __aeabi_ui2f &rArr; _float_epilogue
+<P><STRONG><a name="[5c]"></a>CMOS_ADC</STRONG> (Thumb, 280 bytes, Stack size 56 bytes, user.o(.text.CMOS_ADC))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = CMOS_ADC &rArr; __aeabi_ui2f &rArr; _float_epilogue
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5d]"></a>CMOS_CLK</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, user.o(.text.CMOS_CLK))
+<P><STRONG><a name="[5d]"></a>CMOS_CLK</STRONG> (Thumb, 172 bytes, Stack size 32 bytes, user.o(.text.CMOS_CLK))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = CMOS_CLK &rArr; Get_ADC_Value &rArr; adc_regular_channel_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_write
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_write
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -469,7 +469,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32e23x.o(RESET)
 </UL>
-<P><STRONG><a name="[5f]"></a>Get_ADC_Value</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, adc.o(.text.Get_ADC_Value))
+<P><STRONG><a name="[5e]"></a>Get_ADC_Value</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, adc.o(.text.Get_ADC_Value))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Get_ADC_Value &rArr; adc_regular_channel_config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_software_trigger_enable
@@ -589,7 +589,7 @@ Global Symbols
 <P><STRONG><a name="[28]"></a>_ADCf</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, usart.o(.text._ADCf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = _ADCf &rArr; Get_ADC_Value &rArr; adc_regular_channel_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -670,22 +670,22 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[6b]"></a>adc_flag_clear</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gd32e23x_adc.o(.text.adc_flag_clear))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 </UL>
 
 <P><STRONG><a name="[6a]"></a>adc_flag_get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, gd32e23x_adc.o(.text.adc_flag_get))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 </UL>
 
 <P><STRONG><a name="[56]"></a>adc_regular_channel_config</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, gd32e23x_adc.o(.text.adc_regular_channel_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = adc_regular_channel_config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
 </UL>
 
 <P><STRONG><a name="[6c]"></a>adc_regular_data_read</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, gd32e23x_adc.o(.text.adc_regular_data_read))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 </UL>
 
 <P><STRONG><a name="[54]"></a>adc_resolution_config</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, gd32e23x_adc.o(.text.adc_resolution_config))
@@ -693,7 +693,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[69]"></a>adc_software_trigger_enable</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gd32e23x_adc.o(.text.adc_software_trigger_enable))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_ADC_Value
 </UL>
 
 <P><STRONG><a name="[52]"></a>adc_special_function_config</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, gd32e23x_adc.o(.text.adc_special_function_config))
@@ -741,7 +741,7 @@ Global Symbols
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_timer_config
 </UL>
 
-<P><STRONG><a name="[5e]"></a>gpio_bit_write</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gd32e23x_gpio.o(.text.gpio_bit_write))
+<P><STRONG><a name="[5f]"></a>gpio_bit_write</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gd32e23x_gpio.o(.text.gpio_bit_write))
 <BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMOS_CLK
 </UL>
 

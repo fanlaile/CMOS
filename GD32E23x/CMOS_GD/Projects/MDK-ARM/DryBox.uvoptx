@@ -158,7 +158,7 @@
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>LSD_CMOS.LSD_ADC[1]</ItemText>
+          <ItemText>LSD_CMOS.LSD_ADC</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
