@@ -1,4 +1,4 @@
-./objects/usart.o: ..\..\User\usart.c ..\..\User\usart.h \
+./objects/flash.o: ..\..\User\flash.c ..\..\User\flash.h \
   ..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h \
   ..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
@@ -29,5 +29,6 @@
   ..\..\User\usart.h ..\..\User\adc.h ..\..\User\gpio.h \
   ..\..\User\user.h ..\..\User\timer.h ..\..\User\flash.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h

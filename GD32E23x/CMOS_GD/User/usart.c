@@ -21,7 +21,7 @@ uint8_t receivesize = 128;
 __IO uint8_t txcount = 0; 
 __IO uint16_t rxcount = 0; 
 uint8_t Rx_flag = 0; 
-int32_t str_to_num=2;
+int32_t str_to_num=0;
 
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd call back function                                                                                        */
@@ -34,6 +34,10 @@ int8_t _MEONf(uint8_t* s);
 int8_t _MEOFf(uint8_t* s);
 int8_t _SETPf(uint8_t* s);
 int8_t _ADCf(uint8_t* s);
+int8_t _RDFLf(uint8_t* s);
+int8_t _WRFLf(uint8_t* s);
+int8_t _SETOf(uint8_t* s);
+int8_t _GETOf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -56,7 +60,10 @@ cmd_T CMD_T[] = {
 	{0,	"measure start\r\n"			,_MEONf			},
 	{0,	"measure stop\r\n"			,_MEOFf			},
 	{1,	"set pwm="							,_SETPf			},
-	
+	{1,	"read flash"						,_RDFLf			},
+	{1,	"write flash="					,_WRFLf			},
+	{0,	"setorigin\r\n"					,_SETOf			},
+	{0,	"getorigin\r\n"					,_GETOf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 
@@ -295,6 +302,18 @@ void V_STR_Printf(char *STR)
  * @details  指令处理回调函数
  *
  */
+void LASER_ON(void)
+{
+	uint16_t val;
+	val=LSD_CMOS.LED_PWM*10;
+	timer_channel_output_pulse_value_config(TIMER2,TIMER_CH_0,val);
+//	printf("pwm=%d\r\n",val);
+}
+void LASER_OFF(void)
+{
+	timer_channel_output_pulse_value_config(TIMER2,TIMER_CH_0,0);
+}
+
 int8_t _helpf(uint8_t* s)
 {
 	printf("以下是控制指令，请根据需求发送!\r\n");
@@ -305,41 +324,41 @@ int8_t _helpf(uint8_t* s)
 	printf("measure start开启长测\r\n");
 	printf("measure stop关闭长测\r\n");
 	printf("set pwm=设置激光pwm\r\n");
+	printf("lsd origin = %d\r\n",LSD_CMOS.LSD_ORIGIN);
 	return 1;
 }
 
 int8_t _LAONf(uint8_t* s)
 {
 	uint16_t val;
-//	LASER_ON();
+	LASER_ON();
 //	printf("OK\r\n");
-	val=str_to_num*10;
-	timer_channel_output_pulse_value_config(TIMER2,TIMER_CH_0,val);
-	printf("pwm=%d\r\n",val);
+	
 	V_STR_Printf("ON,OK");
 	return 1;
 }
 int8_t _LAOFf(uint8_t* s)
 {
-//	LASER_OFF();
+	LASER_OFF();
 //	printf("OK\r\n");
 	timer_channel_output_pulse_value_config(TIMER2,TIMER_CH_0,0);
 	V_STR_Printf("OFF,OK");
 	return 1;
 }
 int8_t _DISTf(uint8_t* s){
+	LASER_ON();
 	LSD_CMOS.LSD_START=1;
 
 	return 1;
 }
 int8_t _MEONf(uint8_t* s){
-	
+	LASER_ON();
 	V_STR_Printf("measure start,OK");
 	LSD_CMOS.CMOS_START=1;
 	return 1;
 }
 int8_t _MEOFf(uint8_t* s){
-	
+	LASER_OFF();
 	V_STR_Printf("measure stop,OK");
 	LSD_CMOS.CMOS_START=0;
 	return 1;
@@ -349,6 +368,7 @@ int8_t _SETPf(uint8_t* s){
 	if(str_to_num>100){
 		str_to_num=100;
 	}
+	LSD_CMOS.LED_PWM=str_to_num;
 //	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, str_to_num);
 	sprintf(p_buf,"set pwm=%d,OK",str_to_num);
 	V_STR_Printf(p_buf);
@@ -362,5 +382,38 @@ int8_t _ADCf(uint8_t* s){
 	V_STR_Printf(p_buf);
 	return 1;
 }
-
+int8_t _RDFLf(uint8_t* s){
+	uint32_t *data;
+	uint32_t adr;
+	uint8_t num;
+	Get_Num(s,'h');
+	num=str_to_num*4;
+	adr = FMC_DATA_ADDR+num;
+	FMC_FLASH_Read(data,adr);
+	printf("fmc=%x",*data);
+	
+	
+	return 1;
+}
+int8_t _WRFLf(uint8_t* s){
+	uint32_t num;
+	Get_Num(s,'=');
+	num=str_to_num;
+	FMC_FLASH_Write(num,FMC_DATA_ADDR);
+	printf("ok\r\n");
+	return 1;
+}
+int8_t _SETOf(uint8_t* s)
+{
+	LASER_ON();
+	LSD_CMOS.LSD_START=1;
+	LSD_CMOS.LSD_RESULT=1;
+	return 1;
+}
+int8_t _GETOf(uint8_t* s){
+	uint32_t *data;
+	FMC_FLASH_Read(data,FMC_DAT1_ADDR);
+	printf("ORIGIN=%d\r\n",*data);
+	return 1;
+}
 

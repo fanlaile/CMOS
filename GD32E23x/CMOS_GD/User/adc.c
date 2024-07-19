@@ -11,6 +11,8 @@
 #include <stdio.h>
 
 LSD_Struct LSD_CMOS={ 
+	30,
+	0,
 	0,
 	0,
 	0,

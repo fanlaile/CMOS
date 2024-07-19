@@ -20,6 +20,7 @@ uint8_t arount_cnt=0;
 extern  LSD_Struct LSD_CMOS;
 
 void CMOS_RUN_CLOCK(void);
+uint8_t FLASH_Init(void);
 
 /*!
     \brief      main function
@@ -39,9 +40,12 @@ int main(void)
 	PWM_timer_config();
 	ADC_Init();
 	Usart_Init();
-
+	
+//	
+	delay_1ms(100);
+  FLASH_Init();
 	printf("========== c378 Test Start fan ==========\r\n\r\n ");
-    
+	
 	while(1)
 	{
 		
@@ -51,6 +55,7 @@ int main(void)
 			CMOS_RUN_CLOCK();
 			
 		}
+		
 	}
 }
 
@@ -76,9 +81,14 @@ void CMOS_RUN_CLOCK(void)
 	{
 		CMOS_DIS(arount_cnt);
 		arount_cnt=0;
+		                                                                                                   
 		LSD_CMOS.LSD_INT=0;
 		LSD_CMOS.SP_STATUS=0;
 		LSD_CMOS.LSD_START=0;
+		if(LSD_CMOS.CMOS_START==0)
+		{
+			LASER_OFF();
+		}
 		memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
 		memset(LSD_CMOS.LSD_VALUE,0x00,sizeof(LSD_CMOS.LSD_VALUE));
 	}
@@ -87,4 +97,28 @@ void CMOS_RUN_CLOCK(void)
 	memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
 	delay_1ms(1);
 }
+/**
+  * @brief FLASH INIT
+  * @retval None
+  */
+uint8_t FLASH_Init(void)
+{
+	uint32_t *fmc_flag;
+//	uint16_t k;
+	FMC_FLASH_Read(&fmc_str.fmc_flag,FMC_FLAG_ADDR);
+//	k=*fmc_flag>>16;
+	if(fmc_str.fmc_buffer[0]!=fmc_str.fmc_flag)
+	{
+		FMC_WRITE_BUFFER(FMC_FLAG_ADDR, fmc_str.fmc_buffer,4);//初始化标志
+		printf("flash init\r\n");
+	}
+	else
+	{
+		FMC_FLASH_Read(&fmc_str.fmc_buffer[1],FMC_DAT1_ADDR);
+		LSD_CMOS.LSD_ORIGIN=(uint16_t)fmc_str.fmc_buffer[1];
+
+	}
+	return 0;
+}
+
 

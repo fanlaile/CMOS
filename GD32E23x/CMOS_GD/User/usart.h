@@ -19,6 +19,8 @@ void Usart_Init(void);
 void Usart_GPIO_Init(void);
 void UART_TEST_HANDLE(void);
 void V_STR_Printf(char *STR);
+void LASER_ON(void);
+void LASER_OFF(void);
 #endif //__UART_DEBUG_H__
 
 

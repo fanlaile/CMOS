@@ -27,4 +27,5 @@
   ..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h \
   ..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h \
   ..\..\User\usart.h ..\..\User\adc.h ..\..\User\gpio.h \
-  ..\..\User\user.h ..\..\User\timer.h ..\..\Projects\systick.h
+  ..\..\User\user.h ..\..\User\timer.h ..\..\User\flash.h \
+  ..\..\Projects\systick.h

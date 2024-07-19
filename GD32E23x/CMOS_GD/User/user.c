@@ -178,11 +178,20 @@ void CMOS_DIS(uint8_t arount){
 	
 //	InsertSort(LSD_CMOS.LSD_VALUE,5);
 //	printf("%.1f,%.1f,%.1f,%.1f,%.1f",LSD_CMOS.LSD_VALUE[0],LSD_CMOS.LSD_VALUE[1],LSD_CMOS.LSD_VALUE[2],LSD_CMOS.LSD_VALUE[3],LSD_CMOS.LSD_VALUE[4]);
-	
-	lsd_sum=LSD_CMOS.LSD_VALUE[2];
-	lsd_sum=lsd_sum-200;
-	if(lsd_sum>0 && lsd_sum<900)
+	LSD_CMOS.LSD_VALUE[2]-=200;
+	lsd_sum=LSD_CMOS.LSD_VALUE[2]-LSD_CMOS.LSD_ORIGIN;
+
+	if(LSD_CMOS.LSD_VALUE[2]>0 && LSD_CMOS.LSD_VALUE[2]<900)
 	{
+		if(LSD_CMOS.LSD_RESULT)
+		{
+			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[2];
+			fmc_str.fmc_buffer[1]=LSD_CMOS.LSD_ORIGIN;
+			FMC_WRITE_BUFFER(FMC_FLAG_ADDR,fmc_str.fmc_buffer,4);
+			
+			printf("set origin ok\r\n");
+			LSD_CMOS.LSD_RESULT=0;
+		}
 			sprintf(p_buf,"DISTANCE,OK,%.2f",lsd_sum);
 			V_STR_Printf(p_buf);
 	}

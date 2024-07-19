@@ -216,6 +216,7 @@ typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrStatus;
 #include "gpio.h"
 #include "user.h"
 #include "timer.h"
+#include "flash.h"
 
 #ifdef __cplusplus
 }

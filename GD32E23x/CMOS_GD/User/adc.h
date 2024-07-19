@@ -16,11 +16,13 @@
 #define LSD_SIZE 2048
 
 typedef struct  {
+	uint8_t LED_PWM;
 	uint8_t SP_STATUS;
 	uint8_t LSD_START;
 	uint8_t LSD_INT;
 	uint8_t CMOS_START;
-	uint16_t LSD_OFFSET;
+	uint16_t LSD_RESULT;
+	uint16_t LSD_ORIGIN;
 	uint16_t LSD_ADC[1424];
 	float LSD_VALUE[5];
 }LSD_Struct;
