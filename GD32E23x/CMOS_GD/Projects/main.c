@@ -18,6 +18,7 @@ char p_buf[128];
 uint16_t adc_Buf;
 uint8_t arount_cnt=0;
 extern  LSD_Struct LSD_CMOS;
+extern uint8_t show_flag;
 
 void CMOS_RUN_CLOCK(void);
 uint8_t FLASH_Init(void);
@@ -77,17 +78,17 @@ void CMOS_RUN_CLOCK(void)
 	arount_cnt++;
 	
 	
-	if(arount_cnt>=5)
+	if(arount_cnt>=1)
 	{
 		CMOS_DIS(arount_cnt);
 		arount_cnt=0;
-		                                                                                                   
+		show_flag=0;                                                                                          
 		LSD_CMOS.LSD_INT=0;
 		LSD_CMOS.SP_STATUS=0;
 		LSD_CMOS.LSD_START=0;
 		if(LSD_CMOS.CMOS_START==0)
 		{
-			LASER_OFF();
+//			LASER_OFF();
 		}
 		memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
 		memset(LSD_CMOS.LSD_VALUE,0x00,sizeof(LSD_CMOS.LSD_VALUE));

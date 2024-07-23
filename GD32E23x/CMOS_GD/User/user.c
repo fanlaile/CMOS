@@ -9,7 +9,7 @@
 #include <stdio.h> 
 uint16_t cnt=0;
 extern uint8_t arount_cnt;
-
+extern uint8_t show_flag;
 extern LSD_Struct LSD_CMOS;
 extern uint16_t adc_Buf;
 extern char p_buf[];
@@ -69,12 +69,12 @@ void CMOS_ADC(uint8_t arount){
 	
 	for(uint16_t k=0;k<200;k++)
 	{
-		LSD_CMOS.LSD_ADC[k]=8000;
-		LSD_CMOS.LSD_ADC[1423-k]=8000;
+		LSD_CMOS.LSD_ADC[k]=8000-(2500-k);
+		LSD_CMOS.LSD_ADC[1423-k]=8000-(2500-k);
 	}
 
 	for(uint16_t i=200;i<1224;i++){
-		for(uint16_t m=1;m<10;m++){
+		for(uint16_t m=1;m<8;m++){
 			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
 		}
 		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
@@ -97,9 +97,9 @@ void CMOS_ADC(uint8_t arount){
 	
 	
 	for(uint16_t i=0;i<1224;i++){
-//		if(arount_cnt==3){
-//		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
-//		}
+		if(arount_cnt==3 && show_flag==1){
+		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
+		}
 
 		for(uint16_t m=0;m<smooth_length;m++){
 			left_sum+=LSD_CMOS.LSD_ADC[i+m];
@@ -178,14 +178,14 @@ void CMOS_DIS(uint8_t arount){
 	
 //	InsertSort(LSD_CMOS.LSD_VALUE,5);
 //	printf("%.1f,%.1f,%.1f,%.1f,%.1f",LSD_CMOS.LSD_VALUE[0],LSD_CMOS.LSD_VALUE[1],LSD_CMOS.LSD_VALUE[2],LSD_CMOS.LSD_VALUE[3],LSD_CMOS.LSD_VALUE[4]);
-	LSD_CMOS.LSD_VALUE[2]-=200;
-	lsd_sum=LSD_CMOS.LSD_VALUE[2]-LSD_CMOS.LSD_ORIGIN;
+	LSD_CMOS.LSD_VALUE[0]-=200;
+	lsd_sum=LSD_CMOS.LSD_VALUE[0]-LSD_CMOS.LSD_ORIGIN;
 
-	if(LSD_CMOS.LSD_VALUE[2]>0 && LSD_CMOS.LSD_VALUE[2]<900)
+	if(LSD_CMOS.LSD_VALUE[0]>0 && LSD_CMOS.LSD_VALUE[0]<900)
 	{
 		if(LSD_CMOS.LSD_RESULT)
 		{
-			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[2];
+			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[0];
 			fmc_str.fmc_buffer[1]=LSD_CMOS.LSD_ORIGIN;
 			FMC_WRITE_BUFFER(FMC_FLAG_ADDR,fmc_str.fmc_buffer,4);
 			

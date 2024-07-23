@@ -22,7 +22,7 @@ __IO uint8_t txcount = 0;
 __IO uint16_t rxcount = 0; 
 uint8_t Rx_flag = 0; 
 int32_t str_to_num=0;
-
+uint8_t show_flag = 0; 
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd call back function                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -38,6 +38,7 @@ int8_t _RDFLf(uint8_t* s);
 int8_t _WRFLf(uint8_t* s);
 int8_t _SETOf(uint8_t* s);
 int8_t _GETOf(uint8_t* s);
+int8_t _SHOWf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -64,6 +65,7 @@ cmd_T CMD_T[] = {
 	{1,	"write flash="					,_WRFLf			},
 	{0,	"setorigin\r\n"					,_SETOf			},
 	{0,	"getorigin\r\n"					,_GETOf			},
+	{0,	"show wave\r\n"					,_SHOWf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 
@@ -414,6 +416,13 @@ int8_t _GETOf(uint8_t* s){
 	uint32_t *data;
 	FMC_FLASH_Read(data,FMC_DAT1_ADDR);
 	printf("ORIGIN=%d\r\n",*data);
+	return 1;
+}
+int8_t _SHOWf(uint8_t* s){
+	
+	show_flag=1;
+	LASER_ON();
+	LSD_CMOS.LSD_START=1;
 	return 1;
 }
 
