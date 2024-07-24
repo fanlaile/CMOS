@@ -69,8 +69,9 @@ void CMOS_ADC(uint8_t arount){
 	
 	for(uint16_t k=0;k<200;k++)
 	{
-		LSD_CMOS.LSD_ADC[k]=7000;
-		LSD_CMOS.LSD_ADC[1423-k]=7000;
+		LSD_CMOS.LSD_ADC[k]=6500-200+k;
+		LSD_CMOS.LSD_ADC[1423-k]=7000-200+k;
+//		LSD_CMOS.LSD_ADC[1000+k]=7200;
 	}
 
 	for(uint16_t i=200;i<1224;i++){
@@ -82,7 +83,7 @@ void CMOS_ADC(uint8_t arount){
 	}
 
 	
-	for(uint16_t i=0;i<1224;i++){
+	for(uint16_t i=0;i<1124;i++){
 		if(arount_cnt==3 && show_flag==1){
 		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 		}
@@ -94,7 +95,7 @@ void CMOS_ADC(uint8_t arount){
 				if(LSD_CMOS.LSD_ADC[i]<6000)
 				{
 					Laser_Init.led_start_flag=i;
-					printf("sf%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
+//					printf("sf%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
 				}
 			}
 			else if(Laser_Init.led_end_flag==0 )
@@ -102,7 +103,7 @@ void CMOS_ADC(uint8_t arount){
 				if(LSD_CMOS.LSD_ADC[i]>6000 )
 				{
 					Laser_Init.led_end_flag=i;
-					printf("ef%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
+//					printf("ef%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
 				}
 			}
 		}
@@ -187,7 +188,7 @@ void CMOS_DIS(uint8_t arount){
 	LSD_CMOS.LSD_VALUE[2]-=200;
 	lsd_sum=LSD_CMOS.LSD_VALUE[2]-LSD_CMOS.LSD_ORIGIN;
 
-	if(LSD_CMOS.LSD_VALUE[2]>0 && LSD_CMOS.LSD_VALUE[2]<900)
+	if(LSD_CMOS.LSD_VALUE[2]>0 && LSD_CMOS.LSD_VALUE[2]<800)
 	{
 		if(LSD_CMOS.LSD_RESULT)
 		{

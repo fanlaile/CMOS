@@ -10,7 +10,7 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "gd32e23x.h"
 
-#define smooth_length 150
+#define smooth_length 100
 
 /* USER CODE BEGIN Private defines */
 void CMOS_CLK(void);
