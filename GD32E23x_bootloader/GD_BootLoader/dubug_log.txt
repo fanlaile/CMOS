@@ -1,0 +1,4 @@
+时间：2024/07/20
+使用secureCRT以ymodem协议下载bin文件到GD32e230单片机中，下载到14%时卡住，debug后发现是进入了硬件中断
+调试方法：void HardFault_Handler(void)，进入仿真后全速运行，进入hardfault后，在Call Stack + Locals窗口，
+找到HardFault Handler，右键选择Show Caller Code：程序会自动跳转到出问题的代码，分析后发现是写入flash时出的问题。

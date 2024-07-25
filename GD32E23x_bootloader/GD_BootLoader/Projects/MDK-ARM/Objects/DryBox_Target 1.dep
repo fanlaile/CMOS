@@ -1,0 +1,1144 @@
+Dependencies for Project 'DryBox', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\ARM\startup_gd32e23x.s)(0x669DC374)(--target=arm-arm-none-eabi -mcpu=cortex-m23 -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"GD32E23x SETA 1"-o ./objects/startup_gd32e23x.o)
+F (..\..\Utilities\gd32e230f_start.c)(0x6308AF97)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e230f_start.o -MD)
+I (..\..\Utilities\gd32e230f_start.h)(0x6308AF97)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\system_gd32e23x.c)(0x64814936)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/system_gd32e23x.o -MD)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_adc.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_adc.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_cmp.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_cmp.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_crc.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_crc.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dbg.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_dbg.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dma.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_dma.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_exti.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_exti.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fmc.c)(0x6698BE72)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_fmc.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fwdgt.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_fwdgt.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_gpio.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_gpio.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_i2c.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_i2c.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_misc.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_misc.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_pmu.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_pmu.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rcu.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_rcu.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rtc.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_rtc.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_spi.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_spi.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_syscfg.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_syscfg.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_timer.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_timer.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_usart.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_usart.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_wwdgt.c)(0x6308AF92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_wwdgt.o -MD)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\main.c)(0x66A1A454)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/main.o -MD)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (..\..\Utilities\gd32e230f_start.h)(0x6308AF97)
+I (..\..\Projects\systick.h)(0x648184B5)
+F (..\gd32e23x_it.c)(0x669A2633)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/gd32e23x_it.o -MD)
+I (..\..\Projects\gd32e23x_it.h)(0x6308AF97)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (..\..\Projects\systick.h)(0x648184B5)
+I (..\..\Utilities\gd32e230f_start.h)(0x6308AF97)
+F (..\systick.c)(0x648184B5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/systick.o -MD)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (..\..\Projects\systick.h)(0x648184B5)
+F (..\..\User\flash.c)(0x669F1DCF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/flash.o -MD)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+F (..\..\User\usart.c)(0x6698D410)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/usart.o -MD)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\User\menu.c)(0x6698C170)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/menu.o -MD)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\User\common.c)(0x669F02A9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/common.o -MD)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (..\..\Projects\systick.h)(0x648184B5)
+F (..\..\User\ymodem.c)(0x66A0F695)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m23 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Include -I ../../Utilities -I ../../GD32E23x_Firmware_Library/GD32E23x_standard_peripheral/Include -I ./RTE/_GD32E230F_START -I ../../Projects -I ../../User -Wno-invalid-source-encoding-IC:/Users/111622/AppData/Local/Arm/Packs/GigaDevice/GD32E23x_DFP/1.0.2/Device/Include-D__UVISION_VERSION="536" -DGD32E23x -DGD32E230-o ./objects/ymodem.o -MD)
+I (..\..\User\ymodem.h)(0x66A0E7A2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\gd32e23x.h)(0x6698BE2F)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\core_cm23.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_version.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include\system_gd32e23x.h)(0x6308AF92)
+I (..\..\Projects\gd32e23x_libopt.h)(0x64883F66)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_adc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_crc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dbg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_dma.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_exti.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fmc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_gpio.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_syscfg.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_i2c.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_fwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_pmu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rcu.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_rtc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_spi.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_timer.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_usart.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_wwdgt.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_misc.h)(0x6308AF92)
+I (..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h)(0x6308AF92)
+I (..\..\User\usart.h)(0x66977B2F)
+I (..\..\User\flash.h)(0x669F1DCF)
+I (..\..\User\main.h)(0x66979D04)
+I (..\..\User\menu.h)(0x6698BFA7)
+I (..\..\User\iap_flash.h)(0x669F185C)
+I (..\..\User\common.h)(0x66A19F57)
+I (..\..\User\fmc_operation.h)(0x6697222C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (..\..\readme.txt)(0x6696405A)()
