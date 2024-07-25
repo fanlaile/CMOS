@@ -42,6 +42,7 @@ int8_t _SHOWf(uint8_t* s);
 int8_t _RPWMf(uint8_t* s);
 int8_t _WPWMf(uint8_t* s);
 int8_t _LAINf(uint8_t* s);
+int8_t _UPDTf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -72,6 +73,7 @@ cmd_T CMD_T[] = {
 	{0,	"read pwm\r\n"					,_RPWMf			},
 	{1,	"write pwm="						,_WPWMf			},
 	{0,	"laser init\r\n"				,_LAINf			},
+	{0,	"app updata\r\n"			,_UPDTf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 
@@ -306,7 +308,7 @@ void V_STR_Printf(char *STR)
  * @param    None
  *
  * @returns  None 
- *
+ *+
  * @details  指令处理回调函数
  *
  */
@@ -324,6 +326,7 @@ void LASER_OFF(void)
 
 int8_t _helpf(uint8_t* s)
 {
+	printf("vision:V05\r\n");
 	printf("以下是控制指令，请根据需求发送!\r\n");
 	printf("每条指令请以\\r\\n结尾!\r\n");
 	printf("laser on打开激光\r\n");
@@ -332,6 +335,12 @@ int8_t _helpf(uint8_t* s)
 	printf("measure start开启长测\r\n");
 	printf("measure stop关闭长测\r\n");
 	printf("set pwm=设置激光pwm\r\n");
+	printf("read pwm读取激光pwm\r\n");
+	printf("setorigin设置原点\r\n");
+	printf("getorigin读取原点\r\n");
+	printf("show wave读取波形\r\n");
+	printf("laser init激光pwm自动调节\r\n");//laser init
+	printf("app updata进入固件升级\r\n");//app updata
 	printf("flash origin = %d\r\n",LSD_CMOS.LSD_ORIGIN);
 	printf("flash pwm = %d\r\n",LSD_CMOS.LED_PWM);
 	return 1;
@@ -379,8 +388,8 @@ int8_t _SETPf(uint8_t* s){
 	}
 	LSD_CMOS.LED_PWM=str_to_num;
 //	__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, str_to_num);
-	fmc_str.fmc_buffer[2]=LSD_CMOS.LED_PWM;
-	FMC_WRITE_BUFFER(FMC_FLAG_ADDR, fmc_str.fmc_buffer,4);//初始化标志
+	fmc_str.fmc_buffer[DATA_PWM]=LSD_CMOS.LED_PWM;
+	FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//初始化标志
 	sprintf(p_buf,"set pwm=%d,OK",str_to_num);
 	V_STR_Printf(p_buf);
 	return 1;
@@ -444,8 +453,8 @@ int8_t _WPWMf(uint8_t* s){
 	uint32_t num;
 	Get_Num(s,'=');
 	LSD_CMOS.LED_PWM=str_to_num;
-	fmc_str.fmc_buffer[2]=LSD_CMOS.LED_PWM;
-	FMC_WRITE_BUFFER(FMC_FLAG_ADDR, fmc_str.fmc_buffer,4);//初始化标志
+	fmc_str.fmc_buffer[DATA_PWM]=LSD_CMOS.LED_PWM;
+	FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//初始化标志
 	printf("ok\r\n");
 	return 1;
 }
@@ -454,6 +463,11 @@ int8_t _LAINf(uint8_t* s){
 	Laser_Init.led_init_flag=1;
 	LSD_CMOS.LSD_START=1;
 	printf("laser init start\r\n");
+	return 1;
+}
+int8_t _UPDTf(uint8_t* s){
+	FMC_ERASE_PAGE(FMC_START_ADDR);
+	Execute_user_Program();
 	return 1;
 }
 

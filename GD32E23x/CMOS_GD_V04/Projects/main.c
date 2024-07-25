@@ -13,7 +13,9 @@
 #include <stdio.h>
 #include <string.h>
 
+
 /* USER CODE BEGIN PV */
+
 char p_buf[128];
 uint16_t adc_Buf;
 uint8_t arount_cnt=0;
@@ -31,6 +33,9 @@ uint8_t FLASH_Init(void);
 */
 int main(void)
 {
+	
+	nvic_vector_table_set(NVIC_VECTTAB_FLASH,0x3000);
+	__set_PRIMASK(0);
 	/*  configure SysTick */
 	systick_config();
 	delay_1ms(100);
@@ -109,24 +114,26 @@ void CMOS_RUN_CLOCK(void)
   */
 uint8_t FLASH_Init(void)
 {
-	uint32_t *fmc_flag;
+//	uint32_t *fmc_flag;
 //	uint16_t k;
 	FMC_FLASH_Read(&fmc_str.fmc_flag,FMC_FLAG_ADDR);
 //	k=*fmc_flag>>16;
-	if(fmc_str.fmc_buffer[0]!=fmc_str.fmc_flag)
+	if(fmc_str.fmc_buffer[FLAG_INIT]!=fmc_str.fmc_flag)
 	{
-		FMC_WRITE_BUFFER(FMC_FLAG_ADDR, fmc_str.fmc_buffer,4);//初始化标志
+		FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//初始化标志
 		printf("flash init\r\n");
 	}
 	else
 	{
-		FMC_FLASH_Read(&fmc_str.fmc_buffer[1],FMC_DAT1_ADDR);
-		FMC_FLASH_Read(&fmc_str.fmc_buffer[2],FMC_DAT2_ADDR);
-		LSD_CMOS.LSD_ORIGIN=(uint16_t)fmc_str.fmc_buffer[1];
-		LSD_CMOS.LED_PWM=(uint16_t)fmc_str.fmc_buffer[2];
+		FMC_FLASH_Read(&fmc_str.fmc_buffer[DATA_ORIGIN],FMC_DAT1_ADDR);
+		FMC_FLASH_Read(&fmc_str.fmc_buffer[DATA_PWM],FMC_DAT2_ADDR);
+		LSD_CMOS.LSD_ORIGIN=(uint16_t)fmc_str.fmc_buffer[DATA_ORIGIN];
+		LSD_CMOS.LED_PWM=(uint16_t)fmc_str.fmc_buffer[DATA_PWM];
 
 	}
 	return 0;
 }
+
+
 
 

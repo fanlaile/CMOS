@@ -192,9 +192,9 @@ void CMOS_DIS(uint8_t arount){
 	{
 		if(LSD_CMOS.LSD_RESULT)
 		{
-			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[2];
+			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[DATA_ORIGIN];
 			fmc_str.fmc_buffer[1]=LSD_CMOS.LSD_ORIGIN;
-			FMC_WRITE_BUFFER(FMC_FLAG_ADDR,fmc_str.fmc_buffer,4);
+			FMC_WRITE_BUFFER(FMC_START_ADDR,fmc_str.fmc_buffer,6);
 			
 			printf("set origin ok\r\n");
 			LSD_CMOS.LSD_RESULT=0;
@@ -226,7 +226,7 @@ void CMOS_DIS(uint8_t arount){
 			{
 				Laser_Init.led_result=1;
 				fmc_str.fmc_buffer[2]=LSD_CMOS.LED_PWM;
-				FMC_WRITE_BUFFER(FMC_FLAG_ADDR, fmc_str.fmc_buffer,4);//初始化标志
+				FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//初始化标志
 			}
 			
 			Laser_Init.led_end_flag=0;

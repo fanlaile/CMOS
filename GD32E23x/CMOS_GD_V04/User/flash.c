@@ -41,10 +41,26 @@ OF SUCH DAMAGE.
 
 FMC_STR fmc_str={
 	0,
-	{1112, 0, 50, 0},
+	{0X12341234, 0xabc,0, 50, 0,0},
 	
 };
 
+typedef  void (*pFunction)(void);
+pFunction Jump_To_Application;
+uint32_t JumpAddress;
+
+//擦除flash
+void FMC_ERASE_PAGE(uint32_t adr)
+{
+	uint32_t Address = adr;
+	/* 解锁 */
+	fmc_unlock();
+	/* step1: erase pages */
+	fmc_flag_clear(FMC_FLAG_END | FMC_FLAG_WPERR | FMC_FLAG_PGAERR | FMC_FLAG_PGERR );
+	fmc_page_erase(Address);
+	fmc_flag_clear(FMC_FLAG_END | FMC_FLAG_WPERR | FMC_FLAG_PGAERR | FMC_FLAG_PGERR );
+	fmc_lock();
+}
 
 // 写flash数据
 uint8_t FMC_WRITE_BUFFER(uint32_t adr,uint32_t *buffer,uint16_t len)
@@ -106,6 +122,35 @@ uint8_t FMC_FLASH_Read(uint32_t *data ,uint32_t adr)
 	
     return 0;
 
+}
+
+/**
+  * @brief  跳转到用户程序执行
+  * @param  void
+  * @retval none
+  */
+uint8_t Execute_user_Program(void)
+{
+	__disable_irq();
+	
+	
+//	NVIC_SystemReset();
+//    if (((*(__IO uint32_t *)ApplicationAddress) & 0x2FFE0000) == 0x20000000)//判断用户是否已经下载程序，防止跑飞
+//    {
+//				SerialPutString((uint8_t*)"jump to new\r\n");
+        //跳转至用户代码
+        JumpAddress = *(__IO uint32_t *)(ApplicationAddress + 4);
+        Jump_To_Application = (pFunction)JumpAddress;
+        //初始化用户程序的堆栈指针
+        __set_MSP(*(__IO uint32_t *)ApplicationAddress);
+        Jump_To_Application();
+//    }
+//    else
+//    {
+//				SerialPutString((uint8_t*)"jump error\r\n");
+//        return 1;
+//    }   
+    return 0;
 }
  
 
