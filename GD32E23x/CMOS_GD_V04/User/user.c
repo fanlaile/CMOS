@@ -75,7 +75,7 @@ void CMOS_ADC(uint8_t arount){
 	}
 
 	for(uint16_t i=200;i<1224;i++){
-		for(uint16_t m=1;m<10;m++){
+		for(uint16_t m=1;m<5;m++){
 			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
 		}
 		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
@@ -185,15 +185,15 @@ void CMOS_DIS(uint8_t arount){
 	
 //	InsertSort(LSD_CMOS.LSD_VALUE,5);
 //	printf("%.1f,%.1f,%.1f,%.1f,%.1f",LSD_CMOS.LSD_VALUE[0],LSD_CMOS.LSD_VALUE[1],LSD_CMOS.LSD_VALUE[2],LSD_CMOS.LSD_VALUE[3],LSD_CMOS.LSD_VALUE[4]);
-	LSD_CMOS.LSD_VALUE[2]-=200;
-	lsd_sum=LSD_CMOS.LSD_VALUE[2]-LSD_CMOS.LSD_ORIGIN;
+	LSD_CMOS.LSD_VALUE[1]-=200;
+	lsd_sum=LSD_CMOS.LSD_VALUE[1];
 
-	if(LSD_CMOS.LSD_VALUE[2]>0 && LSD_CMOS.LSD_VALUE[2]<800)
+	if(LSD_CMOS.LSD_VALUE[1]>0 && LSD_CMOS.LSD_VALUE[1]<800)
 	{
 		if(LSD_CMOS.LSD_RESULT)
 		{
-			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[DATA_ORIGIN];
-			fmc_str.fmc_buffer[1]=LSD_CMOS.LSD_ORIGIN;
+			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[1];
+			fmc_str.fmc_buffer[DATA_ORIGIN]=LSD_CMOS.LSD_ORIGIN;
 			FMC_WRITE_BUFFER(FMC_START_ADDR,fmc_str.fmc_buffer,6);
 			
 			printf("set origin ok\r\n");
@@ -225,7 +225,7 @@ void CMOS_DIS(uint8_t arount){
 			else
 			{
 				Laser_Init.led_result=1;
-				fmc_str.fmc_buffer[2]=LSD_CMOS.LED_PWM;
+				fmc_str.fmc_buffer[DATA_PWM]=LSD_CMOS.LED_PWM;
 				FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//初始化标志
 			}
 			
