@@ -50,7 +50,7 @@ int main(void)
 //	
 	delay_1ms(100);
   FLASH_Init();
-	printf("========== c378 Test Start fan ==========\r\n\r\n ");
+//	printf("========== c378 Test Start fan ==========\r\n\r\n ");
 	
 	while(1)
 	{
@@ -65,7 +65,6 @@ int main(void)
 		{
 			Laser_Calibration();
 		}
-		
 	}
 }
 
@@ -88,7 +87,7 @@ void CMOS_RUN_CLOCK(void)
 	
 	
 	
-	if(arount_cnt>=1)
+	if(arount_cnt>=3)
 	{
 		CMOS_DIS(arount_cnt);
 		arount_cnt=0;
@@ -122,7 +121,7 @@ uint8_t FLASH_Init(void)
 	if(fmc_str.fmc_buffer[FLAG_INIT]!=fmc_str.fmc_flag)
 	{
 		FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//初始化标志
-		printf("flash init\r\n");
+//		printf("flash init\r\n");
 	}
 	else
 	{

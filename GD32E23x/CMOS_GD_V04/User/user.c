@@ -67,15 +67,15 @@ void CMOS_ADC(uint8_t arount){
 	int abs_minn=0x7FFFFFFF;
 	int smooth_sum=0;
 	
-	for(uint16_t k=0;k<200;k++)
+	for(uint16_t k=0;k<200;k++)						//首尾填充数据
 	{
-		LSD_CMOS.LSD_ADC[k]=6500-200+k;
-		LSD_CMOS.LSD_ADC[1423-k]=7000-200+k;
+		LSD_CMOS.LSD_ADC[k]=7000;
+		LSD_CMOS.LSD_ADC[1423-k]=7000;
 //		LSD_CMOS.LSD_ADC[1000+k]=7200;
 	}
 
-	for(uint16_t i=200;i<1224;i++){
-		for(uint16_t m=1;m<5;m++){
+	for(uint16_t i=200;i<1224;i++){				//数据平滑处理
+		for(uint16_t m=1;m<10;m++){
 			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
 		}
 		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
@@ -83,12 +83,12 @@ void CMOS_ADC(uint8_t arount){
 	}
 
 	
-	for(uint16_t i=0;i<1124;i++){
-		if(arount_cnt==3 && show_flag==1){
+	for(uint16_t i=0;i<1124;i++){					//
+		if(arount_cnt==3 && show_flag==1){	//打印波形
 		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 		}
 		
-		if(arount_cnt==3)
+		if(arount_cnt==3)										//激光pwm校准
 		{
 			if(Laser_Init.led_start_flag==0)
 			{
@@ -107,8 +107,8 @@ void CMOS_ADC(uint8_t arount){
 				}
 			}
 		}
-		
-		for(uint16_t m=0;m<smooth_length;m++){
+																				//
+		for(uint16_t m=0;m<smooth_length;m++){	
 			left_sum+=LSD_CMOS.LSD_ADC[i+m];
 			right_sum+=LSD_CMOS.LSD_ADC[i+m+smooth_length];
 		}
@@ -185,14 +185,14 @@ void CMOS_DIS(uint8_t arount){
 	
 //	InsertSort(LSD_CMOS.LSD_VALUE,5);
 //	printf("%.1f,%.1f,%.1f,%.1f,%.1f",LSD_CMOS.LSD_VALUE[0],LSD_CMOS.LSD_VALUE[1],LSD_CMOS.LSD_VALUE[2],LSD_CMOS.LSD_VALUE[3],LSD_CMOS.LSD_VALUE[4]);
-	LSD_CMOS.LSD_VALUE[1]-=200;
-	lsd_sum=LSD_CMOS.LSD_VALUE[1];
+	LSD_CMOS.LSD_VALUE[2]-=200;
+	lsd_sum=LSD_CMOS.LSD_VALUE[2];
 
-	if(LSD_CMOS.LSD_VALUE[1]>0 && LSD_CMOS.LSD_VALUE[1]<800)
+	if(LSD_CMOS.LSD_VALUE[2]>0 && LSD_CMOS.LSD_VALUE[2]<800)
 	{
 		if(LSD_CMOS.LSD_RESULT)
 		{
-			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[1];
+			LSD_CMOS.LSD_ORIGIN = LSD_CMOS.LSD_VALUE[2];
 			fmc_str.fmc_buffer[DATA_ORIGIN]=LSD_CMOS.LSD_ORIGIN;
 			FMC_WRITE_BUFFER(FMC_START_ADDR,fmc_str.fmc_buffer,6);
 			
