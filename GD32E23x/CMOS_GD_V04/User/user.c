@@ -63,9 +63,13 @@ void CMOS_CLK(void){
   * @retval None
   */
 void CMOS_ADC(uint8_t arount){
-	int left_sum=0,right_sum=0,abs_val=0x7FFFFFFF;
+	int left_sum=0,right_sum=0,abs_val=0x7FFFFFFF,sum_min=0x7FFFFFFF,sum_max=0,act_val=0;
 	int abs_minn=0x7FFFFFFF;
-	int smooth_sum=0;
+	uint16_t sum_min_index=0,sum_max_index=0;
+	
+	uint16_t edge_start=0,edge_end=0;
+	uint8_t laser_too_high=0;
+//	int smooth_sum=0;
 	
 	for(uint16_t k=0;k<200;k++)						//首尾填充数据
 	{
@@ -73,59 +77,156 @@ void CMOS_ADC(uint8_t arount){
 		LSD_CMOS.LSD_ADC[1423-k]=7000;
 //		LSD_CMOS.LSD_ADC[1000+k]=7200;
 	}
-
-	for(uint16_t i=200;i<1224;i++){				//数据平滑处理
-		for(uint16_t m=1;m<10;m++){
-			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
-		}
-		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
-		smooth_sum=0;
-	}
-
+/*
+	*求相加最小
+	*
+	*
+	*
+	*
+	*/
+//	for(uint16_t i=200;i<1224;i++){				//数据平滑处理
+//		for(uint16_t m=1;m<10;m++){
+//			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
+//		}
+//		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
+//		smooth_sum=0;
+//	}
 	
-	for(uint16_t i=0;i<1124;i++){					//
-		if(arount_cnt==3 && show_flag==1){	//打印波形
+	
+//	for(uint16_t i=0;i<1124;i++){					//
+//		if(arount_cnt==3 && show_flag==1){	//打印波形
+//		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
+//		}
+//		
+//		if(arount_cnt==3)										//激光pwm校准
+//		{
+//			if(Laser_Init.led_start_flag==0)
+//			{
+//				if(LSD_CMOS.LSD_ADC[i]<6000)
+//				{
+//					Laser_Init.led_start_flag=i;
+////					printf("sf%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
+//				}
+//			}
+//			else if(Laser_Init.led_end_flag==0 )
+//			{
+//				if(LSD_CMOS.LSD_ADC[i]>6000 )
+//				{
+//					Laser_Init.led_end_flag=i;
+////					printf("ef%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
+//				}
+//			}
+//		}
+//																				//
+//		for(uint16_t m=0;m<smooth_length;m++){	
+//			left_sum+=LSD_CMOS.LSD_ADC[i+m];
+//			right_sum+=LSD_CMOS.LSD_ADC[i+m+smooth_length];
+//		}
+//		abs_val=abs(left_sum-right_sum);
+//		left_sum=0;
+//		right_sum=0;
+//		
+
+
+//		if(abs_minn>abs_val){
+//			lsd_index=i;
+//			LSD_CMOS.LSD_VALUE[arount_cnt]=i;
+//			abs_minn=abs_val;
+//		}
+//		abs_val=0;
+//	}		
+/*
+*
+*求相减绝对值最小
+*
+*
+*/
+	for(uint16_t i=200; i<1024; i++)
+	{
+		if(arount_cnt==2 && show_flag==1){	//打印波形
 		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 		}
-		
-		if(arount_cnt==3)										//激光pwm校准
+		if(LSD_CMOS.LSD_ADC[i]<7000)
 		{
-			if(Laser_Init.led_start_flag==0)
-			{
-				if(LSD_CMOS.LSD_ADC[i]<6000)
-				{
-					Laser_Init.led_start_flag=i;
-//					printf("sf%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
-				}
-			}
-			else if(Laser_Init.led_end_flag==0 )
-			{
-				if(LSD_CMOS.LSD_ADC[i]>6000 )
-				{
-					Laser_Init.led_end_flag=i;
-//					printf("ef%d=%d\r\n",i,LSD_CMOS.LSD_ADC[i]);
-				}
-			}
+			laser_too_high=1;
 		}
-																				//
 		for(uint16_t m=0;m<smooth_length;m++){	
 			left_sum+=LSD_CMOS.LSD_ADC[i+m];
 			right_sum+=LSD_CMOS.LSD_ADC[i+m+smooth_length];
 		}
-		abs_val=abs(left_sum+right_sum);
+		act_val=left_sum-right_sum;
 		left_sum=0;
 		right_sum=0;
-
-
-		if(abs_minn>abs_val){
-			lsd_index=i;
-			LSD_CMOS.LSD_VALUE[arount_cnt]=i;
-			abs_minn=abs_val;
+		if(sum_max<act_val)
+		{
+			sum_max=act_val;
+			sum_max_index=i;
 		}
+		if(sum_min>act_val)
+		{
+			sum_min=act_val;
+			sum_min_index=i;
+		}
+		act_val=0;
+	}
+	for(uint16_t i=200; i<1124; i++)
+	{
+		if(laser_too_high==0)
+		{
+			LSD_CMOS.LSD_VALUE[arount_cnt]=0;
+			break;
+		}
+		for(uint16_t m=0;m<smooth_length;m++){	
+			left_sum+=LSD_CMOS.LSD_ADC[i+m];
+			right_sum+=LSD_CMOS.LSD_ADC[i+m+smooth_length];
+		}
+		if(i>sum_max_index && i<sum_min_index)
+		{
+			abs_val=abs(left_sum-right_sum);
+			
+			if(abs_minn>abs_val){
+				lsd_index=i;
+				LSD_CMOS.LSD_VALUE[arount_cnt]=i;
+				abs_minn=abs_val;
+			}
+			
+		}
+		left_sum=0;
+		right_sum=0;
 		abs_val=0;
-	}		
-
-//	printf("index = %.1f\r\n",LSD_CMOS.LSD_VALUE[arount_cnt]);
+	}
+	if(arount_cnt==2 && show_flag==1){	//打印波形
+		  printf("sum_max_index=%d**%d  sum_min_index=%d**%d\r\n",sum_max_index,sum_max,sum_min_index,sum_min);
+		}
+/*
+*求边沿
+*
+*
+*
+*
+*/
+//	for(uint16_t i=200; i<1124; i++)
+//	{
+//		if(arount_cnt==2 && show_flag==1){	//打印波形
+//		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
+//		}
+//		if(LSD_CMOS.LSD_ADC[i] <7000 && edge_start==0)
+//		{
+//			edge_start=i;
+//		}
+//		else if(LSD_CMOS.LSD_ADC[i] <7000 && edge_start!=0)
+//		{
+//			edge_end=i;
+////			break;
+//		}
+//		
+//	}
+//	LSD_CMOS.LSD_VALUE[arount_cnt]=(edge_start+edge_end)/2;
+//	if(arount_cnt==2 && show_flag==1)
+//	{	//打印波形
+//		  printf("edge_start=%d  edge_end=%d\r\n",edge_start,edge_end);
+//	}
+	
 }
 //冒泡排序 
 void BubbleSort(float* arr, uint8_t  n)
@@ -238,6 +339,7 @@ void CMOS_DIS(uint8_t arount){
 	else{
 			sprintf(p_buf,"DISTANCE,ERROR,0");
 			V_STR_Printf(p_buf);
+//		printf("\r\nerror = %.f\r\n",LSD_CMOS.LSD_VALUE[2]);
 	}
 
 }
