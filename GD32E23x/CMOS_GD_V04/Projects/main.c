@@ -99,12 +99,12 @@ void CMOS_RUN_CLOCK(void)
 		{
 //			LASER_OFF();
 		}
-		memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
+		memset(LSD_CMOS.LSD_ADC,0,sizeof(LSD_CMOS.LSD_ADC));
 		memset(LSD_CMOS.LSD_VALUE,0x00,sizeof(LSD_CMOS.LSD_VALUE));
 	}
 	LSD_CMOS.LSD_INT=0;
 	LSD_CMOS.SP_STATUS=0;
-	memset(LSD_CMOS.LSD_ADC,0,sizeof(uint16_t)*1424);
+	memset(LSD_CMOS.LSD_ADC,0,sizeof(LSD_CMOS.LSD_ADC));
 	arount_cnt++;
 	delay_1ms(1);
 }

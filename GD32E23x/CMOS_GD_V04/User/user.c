@@ -84,11 +84,11 @@ void CMOS_ADC(uint8_t arount){
 	*
 	*
 	*/
-	for(uint16_t i=200;i<1224;i++){				//数据平滑处理
-		for(uint16_t m=1;m<70;m++){
-			smooth_sum+=LSD_CMOS.LSD_ADC[i+m]/7;
+	for(uint16_t n=200;n<1024;n++){				//数据平滑处理
+		for(uint16_t m=0;m<70;m++){
+			smooth_sum+=LSD_CMOS.LSD_ADC[n+m];
 		}
-		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
+		LSD_CMOS.LSD_ADC[n]=smooth_sum/70;
 		smooth_sum=0;
 	}
 	
@@ -149,6 +149,7 @@ void CMOS_ADC(uint8_t arount){
 		if(LSD_CMOS.LSD_ADC[i]<7000)
 		{
 			laser_too_high=1;
+//			printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 		}
 		for(uint16_t m=0;m<smooth_length;m++){	
 			left_sum+=LSD_CMOS.LSD_ADC[i+m];
@@ -169,7 +170,7 @@ void CMOS_ADC(uint8_t arount){
 		}
 		act_val=0;
 	}
-	for(uint16_t i=200; i<1124; i++)
+	for(uint16_t i=200; i<1024; i++)
 	{
 		if(laser_too_high==0)
 		{
