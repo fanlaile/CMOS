@@ -326,7 +326,7 @@ void LASER_OFF(void)
 
 int8_t _helpf(uint8_t* s)
 {
-	printf("vision:V09\r\n");
+	printf("vision:V10\r\n");
 	printf("以下是控制指令，请根据需求发送!\r\n");
 	printf("每条指令请以\\r\\n结尾!\r\n");
 	printf("laser on打开激光\r\n");

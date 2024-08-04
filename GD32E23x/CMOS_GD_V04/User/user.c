@@ -69,36 +69,36 @@ void CMOS_ADC(uint8_t arount){
 	
 	uint16_t edge_start=0,edge_end=0;
 	uint8_t laser_too_high=0;
-//	int smooth_sum=0;
+	int smooth_sum=0;
 	
-	for(uint16_t k=0;k<200;k++)						//Ê×Î²Ìî³äÊý¾Ý
+	for(uint16_t k=0;k<200;k++)						//é¦–å°¾å¡«å……æ•°æ®
 	{
 		LSD_CMOS.LSD_ADC[k]=7000;
 		LSD_CMOS.LSD_ADC[1423-k]=7000;
 //		LSD_CMOS.LSD_ADC[1000+k]=7200;
 	}
 /*
-	*ÇóÏà¼Ó×îÐ¡
+	*æ±‚ç›¸åŠ æœ€å°
 	*
 	*
 	*
 	*
 	*/
-//	for(uint16_t i=200;i<1224;i++){				//Êý¾ÝÆ½»¬´¦Àí
-//		for(uint16_t m=1;m<10;m++){
-//			smooth_sum+=LSD_CMOS.LSD_ADC[i+m];
-//		}
-//		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
-//		smooth_sum=0;
-//	}
+	for(uint16_t i=200;i<1224;i++){				//æ•°æ®å¹³æ»‘å¤„ç†
+		for(uint16_t m=1;m<70;m++){
+			smooth_sum+=LSD_CMOS.LSD_ADC[i+m]/7;
+		}
+		LSD_CMOS.LSD_ADC[i]=smooth_sum/10;
+		smooth_sum=0;
+	}
 	
 	
 //	for(uint16_t i=0;i<1124;i++){					//
-//		if(arount_cnt==3 && show_flag==1){	//´òÓ¡²¨ÐÎ
+//		if(arount_cnt==3 && show_flag==1){	//æ‰“å°æ³¢å½¢
 //		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 //		}
 //		
-//		if(arount_cnt==3)										//¼¤¹âpwmÐ£×¼
+//		if(arount_cnt==3)										//æ¿€å…‰pwmæ ¡å‡†
 //		{
 //			if(Laser_Init.led_start_flag==0)
 //			{
@@ -137,13 +137,13 @@ void CMOS_ADC(uint8_t arount){
 //	}		
 /*
 *
-*ÇóÏà¼õ¾ø¶ÔÖµ×îÐ¡
+*æ±‚ç›¸å‡ç»å¯¹å€¼æœ€å°
 *
 *
 */
 	for(uint16_t i=200; i<1024; i++)
 	{
-		if(arount_cnt==2 && show_flag==1){	//´òÓ¡²¨ÐÎ
+		if(arount_cnt==2 && show_flag==1){	//æ‰“å°æ³¢å½¢
 		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 		}
 		if(LSD_CMOS.LSD_ADC[i]<7000)
@@ -195,11 +195,11 @@ void CMOS_ADC(uint8_t arount){
 		right_sum=0;
 		abs_val=0;
 	}
-	if(arount_cnt==2 && show_flag==1){	//´òÓ¡²¨ÐÎ
+	if(arount_cnt==2 && show_flag==1){	//æ‰“å°æ³¢å½¢
 		  printf("sum_max_index=%d**%d  sum_min_index=%d**%d\r\n",sum_max_index,sum_max,sum_min_index,sum_min);
 		}
 /*
-*Çó±ßÑØ
+*æ±‚è¾¹æ²¿
 *
 *
 *
@@ -207,7 +207,7 @@ void CMOS_ADC(uint8_t arount){
 */
 //	for(uint16_t i=200; i<1124; i++)
 //	{
-//		if(arount_cnt==2 && show_flag==1){	//´òÓ¡²¨ÐÎ
+//		if(arount_cnt==2 && show_flag==1){	//æ‰“å°æ³¢å½¢
 //		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 //		}
 //		if(LSD_CMOS.LSD_ADC[i] <7000 && edge_start==0)
@@ -223,12 +223,12 @@ void CMOS_ADC(uint8_t arount){
 //	}
 //	LSD_CMOS.LSD_VALUE[arount_cnt]=(edge_start+edge_end)/2;
 //	if(arount_cnt==2 && show_flag==1)
-//	{	//´òÓ¡²¨ÐÎ
+//	{	//æ‰“å°æ³¢å½¢
 //		  printf("edge_start=%d  edge_end=%d\r\n",edge_start,edge_end);
 //	}
 	
 }
-//Ã°ÅÝÅÅÐò 
+//å†’æ³¡æŽ’åº 
 void BubbleSort(float* arr, uint8_t  n)
 {
 	uint8_t end = n;
@@ -269,7 +269,7 @@ void InsertSort(float* a, int n)
 			}
 			else
 			{
-				break;//ÕÒµ½ÕýÈ·Ë³ÐòµÄ²åÈëÎ»ÖÃ
+				break;//æ‰¾åˆ°æ­£ç¡®é¡ºåºçš„æ’å…¥ä½ç½®
 			}
 		}
 		a[end + 1] = tmp;
@@ -327,7 +327,7 @@ void CMOS_DIS(uint8_t arount){
 			{
 				Laser_Init.led_result=1;
 				fmc_str.fmc_buffer[DATA_PWM]=LSD_CMOS.LED_PWM;
-				FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//³õÊ¼»¯±êÖ¾
+				FMC_WRITE_BUFFER(FMC_START_ADDR, fmc_str.fmc_buffer,6);//åˆå§‹åŒ–æ ‡å¿—
 			}
 			
 			Laser_Init.led_end_flag=0;
