@@ -14,6 +14,8 @@ extern "C" {
 
 /* USER CODE BEGIN Private defines */
 
+#define EP_H()	gpio_bit_write(GPIOA,GPIO_PIN_2,1)
+#define EP_L()	gpio_bit_write(GPIOA,GPIO_PIN_2,0)
 #define SP_H()	gpio_bit_write(GPIOA,GPIO_PIN_3,1)
 #define SP_L()	gpio_bit_write(GPIOA,GPIO_PIN_3,0)
 #define CP_H()	gpio_bit_write(GPIOA,GPIO_PIN_4,1)

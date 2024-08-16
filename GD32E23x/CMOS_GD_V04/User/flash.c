@@ -41,7 +41,7 @@ OF SUCH DAMAGE.
 
 FMC_STR fmc_str={
 	0,
-	{0X12341234, 0xabc,0, 50, 0,0},
+	{0X12341234, 0xabc,0, 30, 0,0},
 	
 };
 

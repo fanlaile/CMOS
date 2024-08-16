@@ -12,6 +12,9 @@ extern "C" {
 
 #define smooth_length 100
 
+#define ENABLE_EP
+//#define BORDER_VALUE
+
 /* USER CODE BEGIN Private defines */
 void CMOS_CLK(void);
 void CMOS_ADC(uint8_t arount);

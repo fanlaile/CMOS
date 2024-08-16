@@ -43,6 +43,8 @@ int8_t _RPWMf(uint8_t* s);
 int8_t _WPWMf(uint8_t* s);
 int8_t _LAINf(uint8_t* s);
 int8_t _UPDTf(uint8_t* s);
+int8_t _TEMPf(uint8_t* s);
+int8_t _SETEf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -73,7 +75,9 @@ cmd_T CMD_T[] = {
 	{0,	"read pwm\r\n"					,_RPWMf			},
 	{1,	"write pwm="						,_WPWMf			},
 	{0,	"laser init\r\n"				,_LAINf			},
-	{0,	"app updata\r\n"			,_UPDTf			},
+	{0,	"app updata\r\n"				,_UPDTf			},
+	{0,	"temp?\r\n"							,_TEMPf			},
+	{1,	"EP="										,_SETEf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 
@@ -326,9 +330,10 @@ void LASER_OFF(void)
 
 int8_t _helpf(uint8_t* s)
 {
-	printf("vision:V12\r\n");
+	printf("vision:V40\r\n");
 	printf("以下是控制指令，请根据需求发送!\r\n");
 	printf("每条指令请以\\r\\n结尾!\r\n");
+	
 	printf("laser on打开激光\r\n");
 	printf("laser off关闭激光\r\n");
 	printf("distance距离查询\r\n");
@@ -468,6 +473,26 @@ int8_t _LAINf(uint8_t* s){
 int8_t _UPDTf(uint8_t* s){
 	FMC_ERASE_PAGE(FMC_START_ADDR);
 	Execute_user_Program();
+	return 1;
+}
+int8_t _TEMPf(uint8_t* s){
+	uint16_t temp;
+	temp = Get_Temp();
+	printf("temp = %d\r\n",temp);
+	return 1;
+}
+int8_t _SETEf(uint8_t* s)
+{
+	Get_Num(s,'=');
+	if(str_to_num==0)
+	{
+		EP_L();
+	}
+	else
+	{
+		EP_H();
+	}
+	printf("OK\r\n");
 	return 1;
 }
 

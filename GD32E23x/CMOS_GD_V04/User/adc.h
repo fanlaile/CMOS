@@ -35,6 +35,7 @@ void ADC_Init(void);
 
 uint16_t adc_get_result(void);
 unsigned int Get_ADC_Value(void);
+unsigned int Get_Temp(void);
 #endif //__TEMPERATURE_H__
 
 

@@ -67,7 +67,7 @@ void ADC_Init(void)
 	adc_channel_length_config(ADC_REGULAR_CHANNEL, 1);
 	/* ADC inserted channel config */
 	adc_regular_channel_config(0U, ADC_CHANNEL_0, ADC_SAMPLETIME_1POINT5);
-
+	adc_regular_channel_config(0U, ADC_CHANNEL_16, ADC_SAMPLETIME_1POINT5);
 	//	/* ADC external trigger enable */
 	//	adc_external_trigger_config(ADC_REGULAR_CHANNEL, ENABLE);
 	//	adc_interrupt_enable(ADC_INT_EOIC);
@@ -137,5 +137,28 @@ unsigned int Get_ADC_Value(void)
     // 返回采样值
     return adc_value;
 }
-
+/**********************************************************
+ * 函 数 名 称：Get_ADC_Value
+ * 函 数 功 能：读取ADC值
+ * 传 入 参 数：ADC_CHANNEL_x=要采集的通道
+ * 函 数 返 回：测量到的值
+ * 作       者：LiangXia
+ * 备       注：无
+ **********************************************************/
+unsigned int Get_Temp(void)
+{
+    unsigned int adc_value = 0;
+    // 设置采集通道
+    adc_regular_channel_config(0, ADC_CHANNEL_16, ADC_SAMPLETIME_1POINT5);
+    // 开始软件转换
+    adc_software_trigger_enable( ADC_REGULAR_CHANNEL);
+    // 等待 ADC0 采样完成
+    while(!adc_flag_get( ADC_FLAG_EOC));
+    /* clear the end of conversion flag */
+    adc_flag_clear( ADC_FLAG_EOC);
+    // 读取采样值
+    adc_value = adc_regular_data_read();
+    // 返回采样值
+    return adc_value;
+}
 
