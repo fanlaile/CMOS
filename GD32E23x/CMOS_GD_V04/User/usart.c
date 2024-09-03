@@ -330,7 +330,7 @@ void LASER_OFF(void)
 
 int8_t _helpf(uint8_t* s)
 {
-	printf("vision:V40\r\n");
+	printf("vision:V42\r\n");
 	printf("以下是控制指令，请根据需求发送!\r\n");
 	printf("每条指令请以\\r\\n结尾!\r\n");
 	

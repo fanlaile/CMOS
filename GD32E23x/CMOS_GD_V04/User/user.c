@@ -227,11 +227,11 @@ void CMOS_ADC(uint8_t arount){
 //		if(arount_cnt==2 && show_flag==1){	//打印波形
 //		  printf("%d\r\n",LSD_CMOS.LSD_ADC[i]);
 //		}
-//		if((LSD_CMOS.LSD_ADC[i+1] - LSD_CMOS.LSD_ADC[i])<0 && (LSD_CMOS.LSD_ADC[i+1] - LSD_CMOS.LSD_ADC[i])>-5)
-//		{
-//			
-//			no_peak++;
-//		}
+		if((LSD_CMOS.LSD_ADC[i+1] - LSD_CMOS.LSD_ADC[i])<0 && (LSD_CMOS.LSD_ADC[i+1] - LSD_CMOS.LSD_ADC[i])>-5)
+		{
+			
+			no_peak++;
+		}
 		if(LSD_CMOS.LSD_ADC[i]>7000   )
 		{
 //			laser_too_high=1;
@@ -275,7 +275,7 @@ void CMOS_ADC(uint8_t arount){
 		act_val=0;
 	}
 	if(arount_cnt==2 && show_flag==1){	//打印波形
-		  printf("sum_max_index=%d**%d   sum_max_index_2=%d**%d   sum_min_index=%d**%d  \r\n",sum_max_index,sum_max,sum_max_index_2,sum_max_2,sum_min_index,sum_min);
+		  printf("sum_max_index=%d**%d   sum_max_index_2=%d**%d   sum_min_index=%d**%d    no_peak=%d\r\n",sum_max_index,sum_max,sum_max_index_2,sum_max_2,sum_min_index,sum_min,no_peak);
 		
 	}
 	sum_max_error=0;
@@ -287,7 +287,7 @@ void CMOS_ADC(uint8_t arount){
 	
 	for(uint16_t i=200; i<1024; i++)
 	{
-		if( (sum_max-sum_min)<20000 || laser_too_low==0 || laser_too_high==1)
+		if( (sum_max-sum_min)<20000 || laser_too_low==0 || laser_too_high==1 || no_peak>300)
 		{
 			LSD_CMOS.LSD_VALUE[arount_cnt]=0;
 //			if(arount_cnt==2 && show_flag==1){	//打印波形
