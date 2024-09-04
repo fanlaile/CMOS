@@ -28,7 +28,7 @@
   ..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include\gd32e23x_cmp.h \
   ..\..\User\usart.h ..\..\User\adc.h ..\..\User\gpio.h \
   ..\..\User\user.h ..\..\User\timer.h ..\..\User\flash.h \
-  ..\..\User\led_config.h ..\..\Utilities\gd32e230f_start.h \
-  ..\..\Projects\systick.h \
+  ..\..\User\led_config.h ..\..\User\ds18b20.h ..\..\Projects\systick.h \
+  ..\..\Utilities\gd32e230f_start.h ..\..\Projects\systick.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

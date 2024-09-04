@@ -218,6 +218,7 @@ typedef enum {ERROR = 0, SUCCESS = !ERROR} ErrStatus;
 #include "timer.h"
 #include "flash.h"
 #include "led_config.h"
+#include "ds18b20.h"
 
 #ifdef __cplusplus
 }

@@ -46,7 +46,7 @@ int main(void)
 	PWM_timer_config();
 	ADC_Init();
 	Usart_Init();
-	
+	ds18b20_init();
 //	
 	delay_1ms(100);
   FLASH_Init();

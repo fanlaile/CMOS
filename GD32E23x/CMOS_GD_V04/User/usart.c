@@ -45,6 +45,7 @@ int8_t _LAINf(uint8_t* s);
 int8_t _UPDTf(uint8_t* s);
 int8_t _TEMPf(uint8_t* s);
 int8_t _SETEf(uint8_t* s);
+int8_t _GETTf(uint8_t* s);
 /*---------------------------------------------------------------------------------------------------------*/
 /* usart cmd struct                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
@@ -78,6 +79,7 @@ cmd_T CMD_T[] = {
 	{0,	"app updata\r\n"				,_UPDTf			},
 	{0,	"temp?\r\n"							,_TEMPf			},
 	{1,	"EP="										,_SETEf			},
+	{0,	"get temp\r\n"							,_GETTf			},
 };
 uint8_t cmd_num = sizeof(CMD_T)/sizeof(CMD_T[0]);
 
@@ -330,7 +332,7 @@ void LASER_OFF(void)
 
 int8_t _helpf(uint8_t* s)
 {
-	printf("vision:V42\r\n");
+	printf("vision:V45\r\n");
 	printf("以下是控制指令，请根据需求发送!\r\n");
 	printf("每条指令请以\\r\\n结尾!\r\n");
 	
@@ -348,6 +350,7 @@ int8_t _helpf(uint8_t* s)
 	printf("app updata进入固件升级\r\n");//app updata
 	printf("flash origin = %d\r\n",LSD_CMOS.LSD_ORIGIN);
 	printf("flash pwm = %d\r\n",LSD_CMOS.LED_PWM);
+	printf("get temp获取温度\r\n");
 	return 1;
 }
 
@@ -493,6 +496,12 @@ int8_t _SETEf(uint8_t* s)
 		EP_H();
 	}
 	printf("OK\r\n");
+	return 1;
+}
+int8_t _GETTf(uint8_t* s){
+	double temp;
+	temp=readtemp();
+	printf("%0.4lf",temp);
 	return 1;
 }
 

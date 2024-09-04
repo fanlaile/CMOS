@@ -211,7 +211,7 @@ uint8_t Execute_user_Program(void)
 //	NVIC_SystemReset();
 //    if (((*(__IO uint32_t *)ApplicationAddress) & 0x2FFE0000) == 0x20000000)//判断用户是否已经下载程序，防止跑飞
 //    {
-				SerialPutString((uint8_t*)"jump to new\r\n");
+//				SerialPutString((uint8_t*)"jump to new\r\n");
         //跳转至用户代码
         JumpAddress = *(__IO uint32_t *)(ApplicationAddress + 4);
         Jump_To_Application = (pFunction)JumpAddress;
@@ -359,10 +359,14 @@ void Main_Menu(void)
         {
             SerialPutString((uint8_t*)"\r\n Execute user Program\r\n");
 //            FLASH_ErasePage(FLASH_LAST_PAGE);               //擦除IAP升级标志位存放页
-            if(Execute_user_Program())
-            {
-                return;
-            }
+						if (FLASH_data_check(FLASH_LAST_PAGE, FLASH_DATA_VAL))
+						{
+						 
+								if(Execute_user_Program())
+								{
+										return;
+								}
+						}
         }
         else if ((key == 0x34) )
         {

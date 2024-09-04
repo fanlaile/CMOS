@@ -31,6 +31,7 @@
 ".\objects\timer.o"
 ".\objects\flash.o"
 ".\objects\led_config.o"
+".\objects\ds18b20.o"
 --library_type=microlib --strict --scatter ".\Objects\CMOS_GD_V42.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
